@@ -1,0 +1,42 @@
+[
+  {
+    "rsvp_type": "link",
+    "location_text": "my house",
+    "photo": "",
+    "event_date_end": null,
+    "site_id": 1141,
+    "organization_id": 2001,
+    "id": 455,
+    "event_name": "Event with phone",
+    "publish_date": "2016-03-15T17:42:40",
+    "details": "This is a test event with a phone rsvp.",
+    "event_date": "2016-06-15T18:00:00",
+    "rsvp_info": "444 555 5666",
+    "location_coords": [
+      null,
+      null
+    ],
+    "formattedDate": "June 15 2016, 11:00 am",
+    "rsvp_link": "tel:4445555666"
+  },
+    {
+    "rsvp_type": "phone",
+    "location_text": "my house",
+    "photo": "https://hsl-downloadable-files-test1.s3.amazonaws.com/2001/1e50f41d5c32492a90f2ed0e89baaaf6.jpg",
+    "event_date_end": null,
+    "site_id": 1141,
+    "organization_id": 2001,
+    "id": 455,
+    "event_name": "Event with phone",
+    "publish_date": "2016-03-15T17:42:40",
+    "details": "Crypto-claymore mine futurity silent lights table human skyscraper boat post-car city sunglasses bomb shrine. Media plastic boy papier-mache narrative hotdog chrome savant city bridge augmented reality nodal point dead 8-bit 3D-printed. Tiger-team faded footage city pre-network uplink systemic A.I. sign man math-hacker. Hotdog office youtube network bridge knife garage corporation media systemic A.I. dolphin.",
+    "event_date": "2016-06-15T18:00:00",
+    "rsvp_info": "444 555 5666",
+    "location_coords": [
+      null,
+      null
+    ],
+    "formattedDate": "June 15 2016, 11:00 am",
+    "rsvp_link": "tel:4445555666"
+  }
+]
