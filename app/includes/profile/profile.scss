@@ -1,0 +1,263 @@
+h1, h2, h3, h4, h5, h6, p, ul {
+	margin: 0;
+	padding: 0;
+	font-family: 'Arial';
+}
+a {
+	text-decoration: none;
+	color: $nice-blue;
+	&:hover {
+		text-decoration: none;
+	} 
+}
+p {
+	font-size: 16px;
+	line-height: 1.4;
+}
+h1 {
+	font-size: 46px;
+	font-weight: bold;
+	@include media-down(md) {
+		font-size: 44px;
+	}
+	@include media-down(sm) {
+		font-size: 36px;
+	}
+}
+h3 {
+	font-size: 30px;
+	@include media-down(md) {
+		font-size: 28px;
+	}
+	@include media-down(sm) {
+		font-size: 25px;
+	}
+}
+#profile {
+	padding-bottom: 30px;
+	@include media-down(md) {
+		background: url('/images/bg.jpg') center center no-repeat;
+		background-size: cover;
+		height: 400px;
+	}
+	@include media-down(sm) {
+		background: none;
+		height: auto;
+	}
+	.profile {
+		background: url('/images/bg.jpg') center center no-repeat;
+		background-size: cover;
+		height: 550px;
+		color: #fff;
+		@include media-down(md) {
+			text-align: center;
+			height: 400px;
+			background: none;
+		}
+		@include media-down(sm) {
+			background: none;
+			height: auto;
+			padding-top: 20px;
+			text-align: center;
+		}
+
+		.v-bottom {
+			display: table;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			& > * {
+				display: table-cell;
+				float: none;
+				vertical-align: bottom;
+			}
+		}
+		.profile-image {
+			img {
+				margin-bottom: -20px;
+				width: 225px;
+				@include media-down(md) {
+					margin-bottom: -30px;
+				}
+			}
+		}
+	}
+	.empty-btn:hover > .designations-popup {
+		display: inline-block;
+		opacity: 1;
+		visibility: visible;
+	}
+	.empty-btn > .designations-popup {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		text-align: right;
+		bottom: 60px;
+		left: -175px;
+		transition: all 0.3s ease-in;
+		&:after {
+			content: "";
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 57px 62px 91px;
+			border-color: transparent transparent #d8d8d8 transparent;
+			display: inline-block;
+			position: relative;
+			top: -37px;
+			right: -38px;
+			-webkit-transform: rotateZ(30deg);
+			transform: rotateZ(30deg);
+		}
+		.popup-content {
+			width: 410px;
+			border: 1px solid #d8d8d8;
+			position: relative;
+			background-color: white;
+			color: black;
+			text-align: left;
+			padding: 20px;
+			border-radius: 0;
+			box-shadow: none;
+			z-index: 10;
+			h5 {
+				text-align: center;
+				font-size: 24px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	.user-name {
+		@include media-down(md) {
+			text-align: center;
+		}
+		h1, h1 + p, h3 {
+			margin-bottom: 5px;
+		}
+		h1 + p {
+			font-size: 20px;
+			@include media-down(sm) {
+				font-size: 18px;
+			}
+		}
+		.question {
+			height: 18px;
+			margin-top: -5px;
+		}
+		h3 > span {
+			font-size: 13px;
+			vertical-align: top;
+		}
+		.empty-btn {
+			background: url(/images/help.png) no-repeat;
+			height: 17px;
+			width: 17px;
+			background-size: 17px 17px;
+			border: none;
+			box-shadow: none;
+			outline: none;
+		}
+	}
+	.social-icons {
+		a {
+			display: inline-block;
+			margin-bottom: 5px;
+			img {
+				height: 35px;
+			}
+		}
+		@include media-down(sm) {
+			margin-top: 25px;
+		}
+	}
+	.profile-info {
+		margin-top: 40px;
+		padding-bottom: 30px;
+		.address {
+			color: #000;
+			p,a {
+				font-size: 24px;
+				color: #000;
+				@include media-down(sm) {
+					font-size: 21px;
+					font-weight: bold;
+				}
+			}
+			@include media-down(md) {
+				text-align: center;
+				margin: 25px 0;
+				p {
+					font-size: 16px;
+				}
+			}
+
+		}
+		.description {
+			p {
+				font-size: 16px;
+				@include media-down(md) {
+					margin: 25px 0;
+				}
+				@include media-down(sm) {
+					font-size: 21px;
+				}
+			}
+		}
+		.quote-box {
+			background-color: $dark-white;
+			border-top: 10px solid $rouge;
+			padding: 15px;
+			@include media-down(sm) {
+				margin: 0 15px;
+			}
+			select {
+				padding: 4px 12px;
+			}
+			p {
+				font-size: 20px;
+				font-weight: bold;
+				small {
+					font-size: 16px;
+				}
+			}
+			.form-control {
+				margin-bottom: 8px;
+				height: 28px;
+			}
+			.zip-code {
+				#zipCode {
+					width: 76%;
+					border-radius: 0;
+					display: inline-block;
+				}
+				.btn-default {
+					background-color: $nice-blue;
+					color: $white;
+					height: 28px;
+					width: 22%;
+					padding: 3px;
+					font-weight: bold;
+					font-size: 14px;
+				}
+			}
+			.zip-code + a {
+				font-size: 11px;
+				color: $nice-blue;
+				font-weight: bold;
+				text-decoration: none;
+			}
+		}
+		.quote-box + a {
+			font-size: 13px;
+			color: $nice-blue;
+			margin-top: 10px;
+			display: block;
+			@include media-down(sm) {
+				margin: 10px 10px;
+			}
+			@include media-down(md) {
+				padding-bottom: 30px;
+			}
+		}
+	}
+}

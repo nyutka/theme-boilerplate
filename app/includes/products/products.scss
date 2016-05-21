@@ -1,0 +1,38 @@
+#products {
+	padding: 45px 0;
+	.product-slider {
+		margin: 45px 0;
+		.slick-slide {
+			outline: none;
+			h5 {
+				text-align: center;
+				font-size: 21px;
+	  			line-height: 1.0;
+	  			font-weight: bold;
+	  			margin: 10px 0;
+			}
+		}
+		.slick-prev, .slick-next {
+			top: 20%;
+		}
+		.slick-next:before {
+			content: "\f0da";
+		}
+		.slick-prev:before {
+			content: "\f0d9";
+		}
+		.slick-prev:before, .slick-next:before {
+			color: $tomato;
+			font-family: FontAwesome;
+			font-size: 76px;
+			line-height: inherit;
+			opacity: 1;
+		}
+		.margin {
+			margin: 0 20px;
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+}

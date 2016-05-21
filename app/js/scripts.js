@@ -2,7 +2,10 @@
 require("./common/data-loader.js").init("optimal");
 var $ = require("jquery");
 var JSContext = require("./common/jscontext.js");
-var example = require("../includes/example/example.js").load();
+var navigation = require("../includes/navigation/navigation.js").load();
+var profile = require("../includes/profile/profile.js").load();
+var office = require("../includes/office/office.js").load();
+var products = require("../includes/products/products.js").load();
 
 var getPostsData = function (n) {
     return {
@@ -38,7 +41,10 @@ var getHeaderData = function () {
 
 var initializeTemplates = function () {
     var themeData = JSContext.getThemeData();
-    example.init(window.JSContext);
+    navigation.init(window.JSContext);
+    profile.init(window.JSContext);
+    office.init(window.JSContext);
+    products.init(window.JSContext);
 };
 
 $(document).ready(function () {

@@ -19,17 +19,23 @@ module.exports = {
     },
     sass: {
         src: [
-            src + '/includes/**/*.scss',
-            src + '/css/styles.scss'
+            src + '/css/styles.scss',
+            src + '/includes/**/*.scss'
         ],
         dest: dest + '/css',
-        mainBundle: 'main.css',
+        mainBundle: 'main.scss',
+        includePaths: [
+            src + '/css',
+            './node_modules'
+        ],
         vendorBundle: 'vendor.css',
         vendorsSrc: [
             src + '/css/vendor.scss',
             './node_modules/mapbox.js/theme/style.css',
             './node_modules/bootstrap/dist/css/bootstrap.css',
-            './node_modules/css-modal/modal.scss'
+            './node_modules/css-modal/modal.scss',
+            './node_modules/slick-carousel/slick/slick.css',
+            './node_modules/slick-carousel/slick/slick-theme.css'
         ]
     },
     fonts: {

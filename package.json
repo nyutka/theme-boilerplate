@@ -44,6 +44,9 @@
   },
   "dependencies": {
     "css-modal": "^1.4.1",
-    "gulp-flatten": "^0.2.0"
+    "gulp-concat": "^2.6.0",
+    "gulp-flatten": "^0.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "slick-carousel": "^1.6.0"
   }
 }

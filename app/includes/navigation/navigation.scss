@@ -1,0 +1,90 @@
+#navigation {
+	.top-header {
+		background-color: white;
+		ul {
+			margin-bottom: 0;
+			li a {
+				margin-left: 20px;
+				font-size: 12px;
+				line-height: 19px;
+				color: $nice-blue;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.navigation {
+		font-size: 22px;
+		background-color: $tomato;
+		padding: 18px 0;
+		@include media-down(sm) {
+			padding: 0;
+		}
+
+		.navbar-brand {
+			padding: 0 15px;
+			img {
+				height: $logo-height;
+				@include media-down(md) {
+					height: 23px;
+					margin: 17px 0;
+				}
+				@include media-down(sm) {
+					height: 21px;
+					margin: 18px 0;
+				}
+			}
+		}
+		.navbar-nav{
+			li {
+				a {
+					margin: 0 0 0 29px;
+					padding: 0;
+					color: $white;
+					line-height: 50px;
+					text-align: right;
+					font-size: 22px;
+					font-family: 'Arial';
+					font-weight: bold;
+					&:hover, &:focus {
+						background-color: transparent;
+					}
+					small {
+						font-size: 12px;
+					}
+					@include media-down(sm) {
+						line-height: 1.8;
+						margin-right: 25px;
+						font-size: 18px;
+						font-weight: normal;
+					}
+					span {
+						text-align: right;
+						color: $white;
+						display: block;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		@include media-down(md) {
+			.navbar-collapse {
+				position: absolute;
+				right: 15px;
+				z-index: 10;
+				width: 241px;
+				background-color: $tomato;
+				box-shadow: none;
+			}
+		}
+		.navbar-toggle {
+			font-size: 20px;
+			line-height: 20px;
+			padding: 18px 0;
+			color: $white;
+			margin: 0;
+			margin-right: 15px;
+		}
+	}
+
+}
