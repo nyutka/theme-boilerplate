@@ -1,37 +1,28 @@
-.tomato-btn {
-	background-color: $tomato;
-	border-radius: 0;
-	color: $white;
-	padding: 10px;
-	font-size: 14px;
-	line-height: 1.6;
-	font-weight: bold;
-	border-bottom: 5px solid $rouge;
-	margin-top: 20px;
-	transition: all 0.2s ease-in;
-	&:hover, &:focus {
-		color: $white;
-		background-color: $rouge;
-		border-color: $tomato;
-	}
-}
-.my-box {
-	background-color: $greyish-brown;
-	width: 365px;
-	color: $white;
-	padding: 16px 0;
-	text-align: center;
-	margin-bottom: 18px;
-	h2 {
-		font-size: 44px;
-	}
-}
+
 #office {
 	background-color: $dark-white;
 	padding: 45px 0;
 	clear: both;
 	.same-line > div {
 		padding: 0;
+	}
+	.v-line {
+		& > * {
+			vertical-align: bottom;
+		}
+		.description {
+			margin-top: 100px;
+		}
+	}
+	.office-photo {
+		.description {
+			float: right;
+		}
+		.map {
+			img {
+				float: right;
+			}
+		}
 	}
 	.image {
 		margin: 20px 0;

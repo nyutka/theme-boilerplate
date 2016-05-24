@@ -1,0 +1,42 @@
+#events {
+	background-color: $dark-white;
+	padding: 45px 0;
+	.tomato-btn {
+		padding: 5px 20px;
+		font-size: 23px;
+	}
+	.image {
+		float: left;
+		margin: 0 20px;
+		img  {
+			max-width: 280px;
+		}
+	}
+	.v-line > * {
+		vertical-align: top;
+	}
+	p {
+		margin: 20px 0;
+	}
+	h4 {
+		font-weight: bold;
+	}
+	.boxes {
+		margin-top: 40px;
+	}
+	.caption {
+		display: table-cell;	
+	}
+	.horizontal {
+		h4 {
+			margin-top: 15px;
+		}
+		a {
+			color: $black;
+			font-weight: bold;
+		}
+		& > .caption, & > img {
+			max-width: 320px;
+		}
+	}
+}

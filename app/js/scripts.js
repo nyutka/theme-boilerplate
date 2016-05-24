@@ -6,6 +6,9 @@ var navigation = require("../includes/navigation/navigation.js").load();
 var profile = require("../includes/profile/profile.js").load();
 var office = require("../includes/office/office.js").load();
 var products = require("../includes/products/products.js").load();
+var events = require("../includes/events/events.js").load();
+var news = require("../includes/news/news.js").load();
+var contact = require("../includes/contact/contact.js").load();
 
 var getPostsData = function (n) {
     return {
@@ -45,6 +48,9 @@ var initializeTemplates = function () {
     profile.init(window.JSContext);
     office.init(window.JSContext);
     products.init(window.JSContext);
+    events.init(window.JSContext);
+    news.init(window.JSContext);
+    contact.init(window.JSContext);
 };
 
 $(document).ready(function () {
