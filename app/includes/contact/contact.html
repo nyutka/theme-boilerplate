@@ -6,11 +6,11 @@
 	<div class="col-md-8 col-md-offset-2">
 	<p class="text-right"><small>* required field</small></p>
 
-	<form>
+	<form class="contact-form">
 
 		<div class="form-group">
 			<label for="exampleInputEmail1">Your Name*</label>
-			<input type="text" class="form-control" id="inputName" placeholder="First and Last Name" required>
+			<input type="text" class="form-control" id="contact-name" placeholder="First and Last Name" required>
 		</div>
 
 		<div class="form-group radio-group">
@@ -25,12 +25,12 @@
 
 		<div class="form-group">
 			<label for="exampleInputEmail1">Your Phone</label>
-			<input type="text" class="form-control" id="inputName" placeholder="(###) ###-####">
+			<input type="text" class="form-control" id="contact-phone" placeholder="(###) ###-####">
 		</div>
 		
 		<div class="form-group">
 			<label for="exampleInputEmail1">Your Email*</label>
-			<input type="text" class="form-control" id="inputName" placeholder="email@email.com" required>
+			<input type="text" class="form-control" id="contact-email" placeholder="email@email.com" required>
 		</div>
 
 		<div class="form-group checbox-group">
@@ -52,7 +52,7 @@
 		<div class="form-group">
 			<p>Message</p>
 			<p><small>For your protection, please do not include sensitive personal information such as social security number, credit/debit card number, or health/medical information.</small></p>
-			<textarea rows="6" placeholder="(Optional)"></textarea>
+			<textarea rows="6" placeholder="(Optional)" id="contact-comments"></textarea>
 		</div>
 
 		<a href="#" type="submit" class="btn tomato-btn">Submit</a>

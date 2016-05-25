@@ -9,6 +9,7 @@ var products = require("../includes/products/products.js").load();
 var events = require("../includes/events/events.js").load();
 var news = require("../includes/news/news.js").load();
 var contact = require("../includes/contact/contact.js").load();
+var footer = require("../includes/footer/footer.js").load();
 
 var getPostsData = function (n) {
     return {
@@ -51,6 +52,7 @@ var initializeTemplates = function () {
     events.init(window.JSContext);
     news.init(window.JSContext);
     contact.init(window.JSContext);
+    footer.init(window.JSContext);
 };
 
 $(document).ready(function () {

@@ -1,0 +1,23 @@
+#footer {
+	background-color: $tomato;
+	padding-top: 36px;
+	padding-bottom: 16px;
+	img {
+		height: $logo-height;
+		@include media-down(md) {
+			height: 38px;
+		}
+		@include media-down(sm) {
+			height: 28px;
+		}
+	}
+	ul {
+		margin-top: 34px;
+		li {
+			display: inline-block;
+			a {
+				color: $white;
+			}
+		}
+	}
+}
