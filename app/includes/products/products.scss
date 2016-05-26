@@ -15,23 +15,46 @@
 		.slick-prev, .slick-next {
 			top: 20%;
 		}
-		.slick-next:before {
-			content: "\f0da";
+		@include media-down(md) {
+			.slick-next { 
+				right: 0;
+			}
+			.slick-prev { 
+				left: -7px;
+			}
 		}
-		.slick-prev:before {
-			content: "\f0d9";
+		.slick-next {
+			&:before {
+				background-image: url(/images/arrow-right.png);
+			}
+			&:hover::before {
+				background-image: url(/images/hover-arrow-right.png);
+			}
+		}
+		.slick-prev {
+			&:before {
+				background-image: url(/images/arrow-left.png);
+			}
+			&:hover::before {
+				background-image: url(/images/hover-arrow-left.png);
+			}
 		}
 		.slick-prev:before, .slick-next:before {
-			color: $tomato;
-			font-family: FontAwesome;
-			font-size: 76px;
-			line-height: inherit;
+			content: "";
 			opacity: 1;
+			background-repeat: no-repeat;
+			background-size: 30px 59px;
+			height: 59px;
+			width: 30px;
+			display: block;
+			transition: all 0.2s ease-in;
 		}
 		.margin {
 			margin: 0 20px;
+			text-align: center;
 			img {
 				max-width: 100%;
+				display: inline-block;
 			}
 		}
 	}

@@ -31,7 +31,7 @@ module.exports = {
             jquery: path.join(__dirname, "../node_modules/jquery/dist/jquery.js"),
             underscore: path.join(__dirname, "../node_modules/underscore/underscore.js"),
             moment: path.join(__dirname, "../node_modules/moment/moment.js"),
-            bootstrap: path.join(__dirname, "../node_modules/bootstrap/dist/js/bootstrap.js"),
+            bootstrap: path.join(__dirname, "../node_modules/bootstrap-sass/assets/javascripts/bootstrap.js"),
             mapbox: path.join(__dirname, "../node_modules/mapbox.js"),
             dotdotdot: path.join(__dirname, "../node_modules/dotdotdot/src/js/jquery.dotdotdot.js"),
             theme_module_loader: path.join(__dirname, "../app/js/common/module-loader.js"),

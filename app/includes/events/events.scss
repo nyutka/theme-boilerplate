@@ -8,8 +8,16 @@
 	.image {
 		float: left;
 		margin: 0 20px;
+		text-align: center;
+		@include media-down(xs) {
+			float: inherit;
+		}
 		img  {
 			max-width: 280px;
+			@include media-down(xs) {
+				margin-bottom: 28px;
+				max-height: 338px;
+			}
 		}
 	}
 	.v-line > * {
@@ -25,7 +33,10 @@
 		margin-top: 40px;
 	}
 	.caption {
-		display: table-cell;	
+		display: table-cell;
+		@include media-down(xs) {
+			display: inline-block;
+		}
 	}
 	.horizontal {
 		h4 {

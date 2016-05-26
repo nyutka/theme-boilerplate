@@ -11,6 +11,9 @@
 		img {
 			max-width: 100%;
 			margin-bottom: 15px;
+			@include media-down(xs) {
+				width: 100%;
+			}
 		}
 	}
 }

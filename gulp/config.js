@@ -32,7 +32,6 @@ module.exports = {
         vendorsSrc: [
             src + '/css/vendor.scss',
             './node_modules/mapbox.js/theme/style.css',
-            './node_modules/bootstrap/dist/css/bootstrap.css',
             './node_modules/css-modal/modal.scss',
             './node_modules/slick-carousel/slick/slick.css',
             './node_modules/slick-carousel/slick/slick-theme.css'

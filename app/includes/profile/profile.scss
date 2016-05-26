@@ -1,11 +1,11 @@
 #profile {
 	padding-bottom: 30px;
-	@include media-down(md) {
+	@include media-down(sm) {
 		background: url('/images/bg.jpg') center center no-repeat;
 		background-size: cover;
 		height: 400px;
 	}
-	@include media-down(sm) {
+	@include media-down(xs) {
 		background: none;
 		height: auto;
 	}
@@ -14,12 +14,12 @@
 		background-size: cover;
 		height: 550px;
 		color: #fff;
-		@include media-down(md) {
+		@include media-down(sm) {
 			text-align: center;
 			height: 400px;
 			background: none;
 		}
-		@include media-down(sm) {
+		@include media-down(xs) {
 			background: none;
 			height: auto;
 			padding-top: 20px;
@@ -40,60 +40,92 @@
 		.profile-image {
 			img {
 				margin-bottom: -20px;
-				width: 225px;
-				@include media-down(md) {
+				max-width: 100%;
+				@include media-down(sm) {
 					margin-bottom: -30px;
 				}
 			}
 		}
 	}
-	.empty-btn:hover > .designations-popup {
-		display: inline-block;
-		opacity: 1;
-		visibility: visible;
-	}
-	.empty-btn > .designations-popup {
-		opacity: 0;
-		visibility: hidden;
-		position: absolute;
-		text-align: right;
-		bottom: 60px;
-		left: -175px;
-		transition: all 0.3s ease-in;
-		&:after {
-			content: "";
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 0 57px 62px 91px;
-			border-color: transparent transparent #d8d8d8 transparent;
-			display: inline-block;
+	.empty-btn {
+		@include media-down(sm) {
 			position: relative;
-			top: -37px;
-			right: -38px;
-			-webkit-transform: rotateZ(30deg);
-			transform: rotateZ(30deg);
 		}
-		.popup-content {
-			width: 410px;
-			border: 1px solid #d8d8d8;
-			position: relative;
-			background-color: white;
-			color: black;
-			text-align: left;
-			padding: 20px;
-			border-radius: 0;
-			box-shadow: none;
-			z-index: 10;
-			h5 {
-				text-align: center;
-				font-size: 24px;
-				margin-bottom: 15px;
+		&:hover > .designations-popup {
+			display: inline-block;
+			opacity: 1;
+			visibility: visible;
+		}
+		> .designations-popup {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			text-align: right;
+			bottom: 60px;
+			left: -175px;
+			transition: all 0.3s ease-in;
+			@include media-down(sm) {
+				left: -410px;
+				bottom: 0;
+			}
+			@include media-down(xs) {
+				left: -228px;
+			}
+			&:after {
+				content: "";
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 57px 62px 91px;
+				border-color: transparent transparent #d8d8d8 transparent;
+				display: inline-block;
+				position: relative;
+				top: -37px;
+				right: -38px;
+				-webkit-transform: rotateZ(30deg);
+				transform: rotateZ(30deg);
+
+				@include media-down(sm) {
+					top: -50px;
+					right: -35px;
+				}
+			}
+			.popup-content {
+				width: 410px;
+				border: 1px solid #d8d8d8;
+				position: relative;
+				background-color: white;
+				color: black;
+				text-align: left;
+				padding: 20px;
+				border-radius: 0;
+				box-shadow: none;
+				z-index: 10;
+				h5 {
+					text-align: center;
+					margin-bottom: 15px;
+					@include media-down(sm) {
+						font-weight: bold;
+						margin-top: 30px;
+					}
+				}
+				p {
+					font-size: 16px;
+				}
+				@include media-down(sm) {
+					p {
+						font-size: 16px;
+					}
+				}
+				@include media-down(xs) {
+					width: 228px;
+				}
 			}
 		}
 	}
 	.user-name {
-		@include media-down(md) {
+		text-align: left;
+		@include media-down(sm) {
 			text-align: center;
 		}
 		h1, h1 + p, h3 {
@@ -132,7 +164,7 @@
 			}
 		}
 		@include media-down(sm) {
-			margin-top: 25px;
+			margin-top: 18px;
 		}
 	}
 	.profile-info {
@@ -140,17 +172,23 @@
 		padding-bottom: 30px;
 		.address {
 			color: #000;
-			p,a {
+			@include media-down(sm) {
+				padding: 0;
+			}
+			p, a {
 				font-size: 24px;
 				color: #000;
 				@include media-down(sm) {
+					font-size: 16px;
+				}
+				@include media-down(xs) {
 					font-size: 21px;
 					font-weight: bold;
 				}
 			}
-			@include media-down(md) {
+			@include media-down(sm) {
 				text-align: center;
-				margin: 25px 0;
+				margin-top: 20px;
 				p {
 					font-size: 16px;
 				}
@@ -160,10 +198,10 @@
 		.description {
 			p {
 				font-size: 16px;
-				@include media-down(md) {
+				@include media-down(sm) {
 					margin: 25px 0;
 				}
-				@include media-down(sm) {
+				@include media-down(xs) {
 					font-size: 21px;
 				}
 			}
@@ -172,7 +210,7 @@
 			background-color: $dark-white;
 			border-top: 10px solid $rouge;
 			padding: 15px;
-			@include media-down(sm) {
+			@include media-down(xs) {
 				margin: 0 15px;
 			}
 			select {
@@ -194,6 +232,9 @@
 					width: 76%;
 					border-radius: 0;
 					display: inline-block;
+					@include media-down(sm) {
+						width: 85%;
+					}
 				}
 				.btn-default {
 					background-color: $nice-blue;
@@ -203,6 +244,9 @@
 					padding: 3px;
 					font-weight: bold;
 					font-size: 14px;
+					@include media-down(sm) {
+						width: 14%;
+					}
 				}
 			}
 			.zip-code + a {
@@ -217,10 +261,10 @@
 			color: $nice-blue;
 			margin-top: 10px;
 			display: block;
-			@include media-down(sm) {
+			@include media-down(xs) {
 				margin: 10px 10px;
 			}
-			@include media-down(md) {
+			@include media-down(sm) {
 				padding-bottom: 30px;
 			}
 		}
