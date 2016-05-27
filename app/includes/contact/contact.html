@@ -4,57 +4,69 @@
 
 <div class="container">
 	<div class="col-md-8 col-md-offset-2">
-	<p class="text-right"><small>* required field</small></p>
+		<p class="text-right"><small>* required field</small></p>
 
-	<form class="contact-form">
+		<form class="contact-form">
 
-		<div class="form-group">
-			<label for="exampleInputEmail1">Your Name*</label>
-			<input type="text" class="form-control" id="contact-name" placeholder="First and Last Name" required>
-		</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Your Name*
+					<p class="has-error">Please complete the required field</p>
+				</label>
+				<input type="text" class="form-control" id="contact-name" placeholder="First and Last Name" required>
+			</div>
 
-		<div class="form-group radio-group">
-			<p>Preferred Method of Contact</p>
-			<label class="radio-inline">
-				<input type="radio" name="optradio" class="radio"><span></span>Email
-			</label>
-			<label class="radio-inline">
-				<input type="radio" name="optradio" class="radio"><span></span>Phone
-			</label>
-		</div>
+			<div class="form-group radio-group">
+				<p>Preferred Method of Contact</p>
+				<label class="radio-inline">
+					<input type="radio" name="optradio" class="radio"><span></span>Email
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="optradio" class="radio"><span></span>Phone
+				</label>
+			</div>
 
-		<div class="form-group">
-			<label for="exampleInputEmail1">Your Phone</label>
-			<input type="text" class="form-control" id="contact-phone" placeholder="(###) ###-####">
-		</div>
-		
-		<div class="form-group">
-			<label for="exampleInputEmail1">Your Email*</label>
-			<input type="text" class="form-control" id="contact-email" placeholder="email@email.com" required>
-		</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Your Phone</label>
+				<input type="text" class="form-control" id="contact-phone" placeholder="(###) ###-####">
+			</div>
+			
+			<div class="form-group">
+				<label for="exampleInputEmail1">Your Email*
+					<p class="has-error">Please complete the required field</p>
+				</label>
+				<input type="text" class="form-control" id="contact-email" placeholder="email@email.com" required>
+			</div>
 
-		<div class="form-group checbox-group">
-			<p>I’d like more information on:</p>
-			<label>
-				<input class="checkbox" type="checkbox"><span></span><div>Auto Insurance</div>
-			</label>
-			<label>
-				<input class="checkbox" type="checkbox"><span></span><div>Homeowners Insurance</div>
-			</label>
-			<label>
-				<input class="checkbox" type="checkbox"><span></span><div>Life Insurance</div>
-			</label>
-			<label>
-				<input class="checkbox" type="checkbox"><span></span><div>Financial Services</div>
-			</label>
-		</div>
+			<div class="form-group checbox-group">
+				<p>I’d like more information on:</p>
+				<label>
+					<input class="checkbox" type="checkbox"><span></span><div>Auto Insurance</div>
+				</label>
+				<label>
+					<input class="checkbox" type="checkbox"><span></span><div>Homeowners Insurance</div>
+				</label>
+				<label>
+					<input class="checkbox" type="checkbox"><span></span><div>Life Insurance</div>
+				</label>
+				<label>
+					<input class="checkbox" type="checkbox"><span></span><div>Financial Services</div>
+				</label>
+			</div>
 
-		<div class="form-group">
-			<p>Message</p>
-			<p><small>For your protection, please do not include sensitive personal information such as social security number, credit/debit card number, or health/medical information.</small></p>
-			<textarea rows="6" placeholder="(Optional)" id="contact-comments"></textarea>
-		</div>
+			<div class="form-group">
+				<p>Message</p>
+				<p><small>For your protection, please do not include sensitive personal information such as social security number, credit/debit card number, or health/medical information.</small></p>
+				<textarea rows="6" placeholder="(Optional)" id="contact-comments"></textarea>
+			</div>
 
-		<a href="#" type="submit" class="btn tomato-btn">Submit</a>
-	</form>
+			<a href="#" type="submit" class="btn tomato-btn">Submit</a>
+		</form>
+	</div>
+</div>
+
+<div class="thank-you">
+	<h2>Thank you!</h2>
+	<p>Your message has been sent.</p>
+	<p>'I will contact you at your preferred</p>
+	<p>method of choice as soon as possible.</p>
 </div>

@@ -2,7 +2,12 @@
 	padding: 45px 0;
 	.news-card {
 		display: block;
-		margin: 30px 20px 0 20px;
+		@include media-down(lg) {
+			margin: 30px 20px 0 20px;
+		}
+		@include media-down(md) {
+			margin: 30px 10px 0 10px;
+		}
 		color: $black;
 		h4 {
 			font-weight: bold;

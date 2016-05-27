@@ -172,7 +172,7 @@
 		padding-bottom: 30px;
 		.address {
 			color: #000;
-			@include media-down(sm) {
+			@include media-down(md) {
 				padding: 0;
 			}
 			p, a {

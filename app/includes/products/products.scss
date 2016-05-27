@@ -2,6 +2,14 @@
 	padding: 45px 0;
 	.product-slider {
 		margin: 45px 0;
+		@include media-down(sm) {
+			& > div {
+				display: inline-block;
+				width: 50%;
+				text-align: center;
+				margin-top: 20px;
+			}
+		}
 		.slick-slide {
 			outline: none;
 			h5 {

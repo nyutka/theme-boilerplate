@@ -1,6 +1,8 @@
 #contact {
 	background-color: $dark-white;
 	padding: 45px 0;
+	min-height: 100%;
+	position: relative;
 	p {
 		small {
 			font-size: 14px;
@@ -11,6 +13,21 @@
 	label {
 		font-size: 16px;
 		font-weight: normal;
+	}
+	.has-error {
+		color: $tomato;
+		margin-right: 40px;
+		display: none; /* Set display inline-block */
+		@include media-down(sm) {
+			text-align: right;
+		}
+		@include media-down(xs) {
+			font-size: 18px;
+			text-align: right;
+		}
+	}
+	.required {
+		border: 1px solid $tomato;
 	}
 	.form-group {
 		margin-top: 30px;
@@ -89,5 +106,27 @@
 		font-size: 36px;
 		width: 100%;
 		padding: 0;
+	}
+	.thank-you {
+		text-align: center;
+		height: 100%;
+		display: none;
+		h2 {
+			font-size: 48px;
+			margin-top: 115px;
+			@include media-down(sm) {
+				margin-top: 126px;
+			}
+			@include media-down(xs) {
+				font-size: 32px;
+				margin-top: 85px
+			}
+		}
+		p {
+			font-size: 32px;
+			@include media-down(xs) {
+				font-size: 16px;
+			}
+		}
 	}
 }

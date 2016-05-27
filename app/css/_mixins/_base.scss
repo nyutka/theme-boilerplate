@@ -1,3 +1,7 @@
+body, html {
+	min-height: 100%;
+	position: relative;
+}
 body {
 	font-family: 'Arial';
 	overflow-x: hidden;
@@ -49,7 +53,7 @@ body {
 	h4 {
 		font-size: 28px;
 		@include media-down(sm) {
-			font-size: 28px;
+			font-size: 26px;
 		}
 		@include media-down(xs) {
 			font-size: 25px;
@@ -85,9 +89,6 @@ body {
 	}
 	input.form-control {
 		height: 40px;
-		&:required {
-			border-color: $tomato;
-		}
 	}
 	textarea {
 		resize: none;

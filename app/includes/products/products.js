@@ -7,7 +7,13 @@ var callback = function() {
         slidesToShow: 4,
         autoplay: true,
         speed: 200,
-        arrows: true
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: "unslick"
+            }
+        ]
     });
 };
 module.exports = {
