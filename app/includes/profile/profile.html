@@ -3,13 +3,13 @@
 		<div class="clearfix v-bottom">
 			<!-- Profile image -->
 			<div class="col-lg-4 col-md-3 col-sm-12 col-sm-12 profile-image">
-				<img src="http://fillmurray.com/200/300">
+				<img src="<%- profile.profile_photo %>">
 			</div>
 
 			<!-- Profile user Name -->
 			<div class="col-lg-8 col-md-9 hidden-sm hidden-xs user-name">
-				<h1>Agent A. Agent Longname</h1>
-				<p>CASL, CPCU, CPA, PMP 
+				<h1><%- profile.first_name %> <%- profile.last_name%></h1>
+				<p><%- profile.designations %>
 					<button type="button" class="empty-btn">
 						<div class="designations-popup">
 							<div class="popup-content">
@@ -19,7 +19,7 @@
 						</div>
 					</button>
 				</p>
-				<h3>State Farm<span>®</span> Insurance Agent
+				<h3><%- profile.title %>
 
 					<!-- Social Icons -->
 					<div class="hidden-sm hidden-xs pull-right social-icons">
@@ -44,8 +44,8 @@
 
 			<!-- Profile user's Name for mobile -->
 			<div class="col-sm-12 col-xs-12 text-center visible-sm  visible-xs user-name">
-				<h1>Agent A. Agent Longname</h1>
-				<p>CASL, CPCU, CPA, PMP 
+				<h1><%- profile.first_name %> <%- profile.last_name%></h1>
+				<p><%- profile.designations %>
 					<button type="button" class="empty-btn">
 						<div class="designations-popup">
 							<div class="popup-content">
@@ -55,7 +55,7 @@
 						</div>
 					</button>
 				</p>
-				<h3>State Farm<span>®</span> Insurance Agent</h3>
+				<h3><%- profile.title %></h3>
 			</div>
 			<!-- End -->
 
@@ -74,10 +74,10 @@
 
 			<!-- Address -->
 			<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12 address">
-				<p>123 Main St.</p> 
-				<p>Optional Line 2</p>
-				<p>Anywhere, IL 61674</p>
-				<p><a href="tel:(309)234-5678" title="(309) 234-5678">(309) 234-5678</a></p>
+				<p><%- profile.address.street %></p> 
+				<!-- <p>Optional Line 2</p> -->
+				<p><%- profile.address.city %>, <%- profile.address.state %> <%- profile.address.zip_code %></p>
+				<p><a href="<%- profile.phones.phone_link_formatted %>" title="<%- profile.phones.phone %>"><%- profile.phones.phone %></a></p>
 			</div>
 			<!-- End -->
 
@@ -97,7 +97,7 @@
 
 			<!-- Description -->
 			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 description">
-				<p>MISSION STATEMENT: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper ligula sapien, eget rhoncus sapien congue vitae. Donec iaculis mollis ipsum ut rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<p><%- profile.professional_summary %></p>
 			</div>
 			<!-- End -->
 

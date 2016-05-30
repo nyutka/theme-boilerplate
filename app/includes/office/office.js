@@ -1,7 +1,12 @@
 var Module = require("theme_module_loader");
 var JSContext = require("../../js/common/jscontext.js");
+var MapTools = require("../../js/common/map-tools.js");
 var htmlTemplate = require("./office.html");
-var callback = function(){};
+var callback = function() {
+    var Profile = JSContext.getProfile();
+    MapTools.showMap(Profile.address, 'map-container');
+    // var showMap = function(address, containerID, options, markerClickHandler) {
+};
 module.exports = {
     load: function() {
         var args = {

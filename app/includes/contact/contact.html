@@ -6,22 +6,21 @@
 	<div class="col-md-8 col-md-offset-2">
 		<p class="text-right"><small>* required field</small></p>
 
-		<form class="contact-form">
+		<form class="contact-form" id="contact-empty">
 
 			<div class="form-group">
-				<label for="exampleInputEmail1">Your Name*
+				<label for="contact-name">Your Name*
 					<p class="has-error">Please complete the required field</p>
 				</label>
-				<input type="text" class="form-control" id="contact-name" placeholder="First and Last Name" required>
+				<input type="text" name="full_name" class="form-control" id="contact-name" placeholder="First and Last Name" required>
 			</div>
 
 			<div class="form-group radio-group">
-				<p>Preferred Method of Contact</p>
 				<label class="radio-inline">
-					<input type="radio" name="optradio" class="radio"><span></span>Email
+					<input data-label="Contact method" type="radio" name="contact_method" class="radio"><span></span>Email
 				</label>
 				<label class="radio-inline">
-					<input type="radio" name="optradio" class="radio"><span></span>Phone
+					<input data-label="Contact method" type="radio" name="contact_method" class="radio"><span></span>Phone
 				</label>
 			</div>
 
@@ -59,12 +58,12 @@
 				<textarea rows="6" placeholder="(Optional)" id="contact-comments"></textarea>
 			</div>
 
-			<a href="#" type="submit" class="btn tomato-btn">Submit</a>
+			<button type="submit" class="btn tomato-btn">Submit</button>
 		</form>
 	</div>
 </div>
 
-<div class="thank-you">
+<div class="thank-you" id="contact-success">
 	<h2>Thank you!</h2>
 	<p>Your message has been sent.</p>
 	<p>'I will contact you at your preferred</p>
