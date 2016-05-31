@@ -3,38 +3,22 @@
 </div>
 
 <div class="container">
-	<div class="row">
-		<div class="col-sm-12 col-md-4">
-			<a href="#" class="news-card">
-				<div class="col-sm-4 col-md-12">
-					<img src="/images/page-1.png">
-				</div>
-				<div class="caption col-sm-8 col-md-12">
-					<h4>Vestibulum ullamcorper ligula sapien</h4>
-					<p>Eget rhoncus sapien congue vitae. Donec iaculis mollis ipsum ut rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper ligula sapien, eget rhoncus sapien congue vitae.</p>
-				</div>
-			</a>
-		</div>
-		<div class="col-sm-12 col-md-4">
-			<a href="#" class="news-card">
-				<div class="col-sm-4 col-md-12">
-					<img src="/images/page-1.png">
-				</div>
-				<div class="caption col-sm-8 col-md-12">
-					<p>Eget rhoncus sapien congue vitae. Donec iaculis mollis ipsum ut rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper ligula sapien, eget rhoncus sapien congue vitae.</p>
+	<div class="row same-height">
+	<% _.each(posts, function(post, number) { %>
+		<div class="col-sm-12 col-md-4 col-lg-4">
+			<a href="<%- post.link %>" class="news-card">
+				<div class="row">
+					<div class="col-sm-4 col-md-12">
+						<img src="<%- post.image %>">
+					</div>
+					<div class="caption col-sm-8 col-md-12">
+						<h4><%- post.link_title %></h4>
+						<p><%- post.message %></p>
+					</div>
 				</div>
 			</a>
 		</div>
-		<div class="col-sm-12 col-md-4">
-			<a href="#" class="news-card">
-				<div class="col-sm-4 col-md-12">
-					<img src="/images/page-1.png">
-				</div>
-				<div class="caption col-sm-8 col-md-12">
-					<h4>Vestibulum ullamcorper ligula sapien</h4>
-				</div>
-			</a>
-		</div>
+	<% }); %>
 	</div>
 
 	<div class="text-right">
