@@ -2,6 +2,7 @@ var Module = require("theme_module_loader");
 var JSContext = require("../../js/common/jscontext.js");
 var htmlTemplate = require("./events.html");
 var callback = function() {
+    var Profile = JSContext.getProfile();
 };
 module.exports = {
     load: function() {

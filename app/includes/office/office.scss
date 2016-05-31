@@ -3,30 +3,28 @@
 	background-color: $dark-white;
 	padding: 45px 0;
 	clear: both;
-	.same-line > div {
-		padding: 0;
+	.location {
+		width: 40%;
+		& > div {
+			padding: 0;
+		}
+		& > .address {
+			display: inline-block;
+		}
+		@include media-down(sm) {
+			width: 100%;
+		}
 	}
-	.v-line {
-		& > * {
-			vertical-align: bottom;
-		}
-		.description {
-			margin-top: 100px;
-		}
-	}
-	.office-photo {
-		.description {
-			float: right;
-		}
-		.map {
-			img {
-				float: right;
-			}
-		}
+	.map {
+		width: 55%;
+		height: 500px;
+		margin-top: 20px;
 	}
 	.image {
 		margin: 20px 0;
-		width: 100%;
+		max-width: 100%;
+		display: inline-block;
+		min-height: 100px;
 	}
 	h3 {
 		margin: 20px 0;

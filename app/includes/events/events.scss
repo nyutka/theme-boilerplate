@@ -34,9 +34,21 @@
 	}
 	.caption {
 		display: table-cell;
+		padding: 0 20px;
 		@include media-down(xs) {
 			display: inline-block;
 		}
+	}
+	.link {
+		@extend .tomato-btn;
+	}
+	.phone {
+		&:before {
+			content: "Call "
+		}
+		font-weight: bold;
+		font-size: 16px;
+		color: $black;
 	}
 	.horizontal {
 		h4 {
