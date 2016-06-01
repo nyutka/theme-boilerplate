@@ -34,7 +34,8 @@ module.exports = {
             './node_modules/mapbox.js/theme/style.css',
             './node_modules/css-modal/modal.scss',
             './node_modules/slick-carousel/slick/slick.css',
-            './node_modules/slick-carousel/slick/slick-theme.css'
+            './node_modules/slick-carousel/slick/slick-theme.css',
+            './node_modules/sidr/dist/stylesheets/jquery.sidr.dark.min.css'
         ]
     },
     fonts: {

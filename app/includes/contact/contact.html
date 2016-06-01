@@ -6,16 +6,16 @@
 	<div class="col-md-8 col-md-offset-2">
 		<p class="text-right"><small>* required field</small></p>
 
-		<form class="contact-form" id="contact-empty">
+		<form class="contact-form" >
 
 			<div class="form-group">
-				<label for="contact-name">Your Name*
-					<p class="has-error">Please complete the required field</p>
-				</label>
+				<label for="contact-name">Your Name*</label>
 				<input type="text" name="full_name" class="form-control" id="contact-name" placeholder="First and Last Name" required>
+				<p class="error-message">Please complete the required field</p>
 			</div>
 
 			<div class="form-group radio-group">
+				<p>Preferred Method of Contact</p>
 				<label class="radio-inline">
 					<input data-label="Contact method" type="radio" name="contact_method" class="radio"><span></span>Email
 				</label>
@@ -25,30 +25,29 @@
 			</div>
 
 			<div class="form-group">
-				<label for="exampleInputEmail1">Your Phone</label>
-				<input type="text" class="form-control" id="contact-phone" placeholder="(###) ###-####">
+				<label for="contact-phone">Your Phone</label>
+				<input type="tel" class="form-control" id="contact-phone" placeholder="(###) ###-####">
 			</div>
 			
 			<div class="form-group">
-				<label for="exampleInputEmail1">Your Email*
-					<p class="has-error">Please complete the required field</p>
-				</label>
-				<input type="text" class="form-control" id="contact-email" placeholder="email@email.com" required>
+				<label for="contact-email">Your Email*</label>
+				<input type="email" class="form-control" id="contact-email" placeholder="email@email.com" required>
+				<p class="error-message">Please complete the required field</p>
 			</div>
 
 			<div class="form-group checbox-group">
 				<p>I’d like more information on:</p>
 				<label>
-					<input class="checkbox" type="checkbox"><span></span><div>Auto Insurance</div>
+					<input class="checkbox" data-label="auto-insurance" type="checkbox"><span></span><div>Auto Insurance</div>
 				</label>
 				<label>
-					<input class="checkbox" type="checkbox"><span></span><div>Homeowners Insurance</div>
+					<input class="checkbox" data-label="homeowners-insurance" type="checkbox"><span></span><div>Homeowners Insurance</div>
 				</label>
 				<label>
-					<input class="checkbox" type="checkbox"><span></span><div>Life Insurance</div>
+					<input class="checkbox" data-label="life-insurance" type="checkbox"><span></span><div>Life Insurance</div>
 				</label>
 				<label>
-					<input class="checkbox" type="checkbox"><span></span><div>Financial Services</div>
+					<input class="checkbox" data-label="financial-services" type="checkbox"><span></span><div>Financial Services</div>
 				</label>
 			</div>
 

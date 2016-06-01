@@ -31,6 +31,12 @@
 	}
 	.boxes {
 		margin-top: 40px;
+		@include media-down(sm) {
+			display: none;
+			&:first-child {
+				display: block;
+			}
+		}
 	}
 	.caption {
 		display: table-cell;

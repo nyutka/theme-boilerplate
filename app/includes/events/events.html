@@ -5,6 +5,7 @@
 
 <div class="container">
 	<% _.each(events, function(event, key) { %>
+		<% if (key > 1) return; %>
 		<div class="boxes v-line">
 			<div class="event-box">
 				<div class="image">
@@ -19,20 +20,6 @@
 			</div>
 		</div>
 	<% }); %>
-	
-<!-- 	<div class="boxes v-line">
-		<div class="event-box">
-			<div class="horizontal">
-				<img src="http://placehold.it/350x350">
-				<div class="caption">
-					<h4>Lorem ipsum dolor sit amet</h4>
-					<time>December 15 2016 6:15pm - 7:30pm</time>
-					<p>Vestibulum ullamcorper ligula sapien, eget rhoncus sapien congue vitae. Donec iaculis mollis ipsum ut rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper ligula sapien, eget rhoncus sapien congue vitae.</p>
-					<a href="tel:(309)123-4567">Call (309) 123-4567</a>
-				</div>
-			</div>
-		</div>
-	</div> -->
 
 	<div class="text-right">
 		<a href="#"><strong>More Events</strong></a>

@@ -25,9 +25,18 @@
 		max-width: 100%;
 		display: inline-block;
 		min-height: 100px;
+		img {
+			position: absolute;
+			width: 40%;
+			left: 0;
+			bottom: 0;
+		}
 	}
 	h3 {
 		margin: 20px 0;
+	}
+	.v-line {
+		position: relative;
 	}
 	.nav-tabs {
 		border-bottom: none;

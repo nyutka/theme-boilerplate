@@ -23,7 +23,8 @@ module.exports = {
             "theme_module_loader",
             "cssmodal",
             "dotdotdot",
-            "slick"
+            "slick",
+            "sidr"
         ]
     },
     resolve: {
@@ -36,7 +37,8 @@ module.exports = {
             dotdotdot: path.join(__dirname, "../node_modules/dotdotdot/src/js/jquery.dotdotdot.js"),
             theme_module_loader: path.join(__dirname, "../app/js/common/module-loader.js"),
             cssmodal: path.join(__dirname, "../node_modules/css-modal/modal.js"),
-            slick: path.join(__dirname, "../node_modules/slick-carousel/slick/slick.js")
+            slick: path.join(__dirname, "../node_modules/slick-carousel/slick/slick.js"),
+            sidr: path.join(__dirname, "../node_modules/sidr/dist/jquery.sidr.js")
         },
     },
     module: {

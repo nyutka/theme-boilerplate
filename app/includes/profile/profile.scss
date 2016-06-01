@@ -4,10 +4,12 @@
 		background: url('/images/bg.jpg') center center no-repeat;
 		background-size: cover;
 		height: 400px;
+		margin-top: 58px;
 	}
 	@include media-down(xs) {
 		background: none;
 		height: auto;
+		
 	}
 	.profile {
 		background: url('/images/bg.jpg') center center no-repeat;

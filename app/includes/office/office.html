@@ -18,7 +18,7 @@
 		<% _.each(profile.suboffices, function(office, key) { %>
 		<div role="tabpanel" class="tab-pane <%- key == 0 ? 'active' : '' %>" id="city<%- key %>">
 			<div class="v-line">
-				<div class="map pull-right" id="map-container"></div>
+				<div class="map pull-right hidden-sm hidden-xs" id="map-container"></div>
 				<div class="location pull-left">
 					<div class="address">
 						<div class="col-sm-6 col-md-6 col-lg-6">
@@ -34,9 +34,17 @@
 							<p><%- office.office_hours %></p>
 						</div>
 					</div>
-					<div class="image">
+					<div class="image hidden-sm hidden-xs">
 						<img src="<%- office.office_image %>">
 					</div>
+				</div>
+			</div>
+			<div class="visible-sm visible-xs">
+				<div class="col-sm-6 col-xs-12">
+					<img src="<%- office.office_image %>">
+				</div>
+				<div class="col-sm-6 col-xs-12">
+					<div class="map pull-right hidden-sm hidden-xs" id="map-container"></div>
 				</div>
 			</div>
 			<div class="description">
@@ -44,6 +52,7 @@
 				<p>Short Description About Agent: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper ligula sapien, eget rhoncus sapien congue vitae. Donec iaculis mollis ipsum ut rhoncus.</p>
 				<a href="#"><strong>Learn More About [Agent A. Agent Longname]</strong></a>
 			</div>
+
 		</div>
 		<% }); %>
 		

@@ -25,6 +25,10 @@
 		transition: all 0.4s ease-out;
 		@include media-down(sm) {
 			padding: 0 15px;
+			position: fixed;
+			width: 100%;
+			right: 0;
+			z-index: 10;
 		}
 
 		.navbar-brand {
@@ -82,24 +86,49 @@
 				}
 			}
 		}
-		@include media-down(sm) {
-			.navbar-collapse {
-				position: absolute;
-				right: 15px;
-				z-index: 10;
-				width: 241px;
-				background-color: $tomato;
-				box-shadow: none;
-				padding: 0;
-			}
-		}
 		.navbar-toggle {
 			font-size: 20px;
 			line-height: 20px;
 			padding: 18px 0;
 			color: $white;
 			margin: 0;
+			a {
+				i {
+					padding-left: 5px;
+				}
+			}
 		}
 	}
-
+	#navigation-mobile {
+		display: none;
+		@include media-down(sm) {
+			display: block;
+		}
+	}
+	#mobile-header {
+		a {
+			color: $white;
+		}
+	}
+}
+.sidr {
+	background: $tomato;
+	box-shadow: none;
+	font-family: 'Arial';
+	top: 58px;
+	text-align: right;
+	padding-right: 15px;
+	font-size: 16px;
+	.sidr-inner {
+		list-style: none;
+		li {
+			margin: 7px 0; 
+			a {
+				color: $white;
+				small {
+					font-size: 12px;
+				}
+			}
+		}
+	}
 }

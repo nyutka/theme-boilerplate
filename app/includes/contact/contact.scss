@@ -14,27 +14,44 @@
 		font-size: 16px;
 		font-weight: normal;
 	}
-	.has-error {
+	.error-message {
+		display: none;
+	}
+	input + .error-message {
+		margin-left: 15px;
 		color: $tomato;
-		margin-right: 40px;
-		display: none; /* Set display inline-block */
-		@include media-down(sm) {
-			text-align: right;
-		}
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 90px;
 		@include media-down(xs) {
-			font-size: 18px;
-			text-align: right;
+			position: relative;
+			top: -85px;
+			left: 0;
+			float: right;
 		}
 	}
-	.required {
-		border: 1px solid $tomato;
+	.validated {
+		input {
+			& + .error-message {
+				display: inline-block;
+			}
+			&:invalid {
+				margin-right: 40px;
+				border: 1px solid $tomato;
+				@include media-down(xs) {
+					font-size: 18px;
+				}
+			}
+		}
 	}
 	.form-group {
 		margin-top: 30px;
+		position: relative;
 	}
 	.radio-group {
 		label {
-			margin: 10px 20px 10px 0;
+			margin: 10px 20px 0 0;
 			cursor: pointer;
 			padding: 0;
 		}

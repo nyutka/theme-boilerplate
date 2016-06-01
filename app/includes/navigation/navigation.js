@@ -2,6 +2,7 @@ var Module = require("theme_module_loader");
 var JSContext = require("../../js/common/jscontext.js");
 var htmlTemplate = require("./navigation.html");
 var callback = function(){
+    var Profile = JSContext.getProfile();
 
     $(window).scroll(function(){
         var sticky = $('.navigation'),
@@ -9,6 +10,12 @@ var callback = function(){
 
         if (scroll >= 22) sticky.addClass('navbar-fixed-top');
         else sticky.removeClass('navbar-fixed-top');
+    });
+
+    $('#responsive-menu-button').sidr({
+        name: 'sidr-main',
+        source: '#navigation-mobile',
+        side: 'right'
     });
 };
 module.exports = {
