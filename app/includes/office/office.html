@@ -2,13 +2,15 @@
 	<h2>My Office</h2>
 </div>
 <div class="container">
-	<a href="#" class="pull-right hidden-sm hidden-xs"><strong>View Map and Directions</strong></a>
+	<a href="#" id="view-map" target="_blank" class="pull-right hidden-sm hidden-xs"><strong>View Map and Directions</strong></a>
 
 
 	<!-- Nav tabs  class="active" -->
-	<ul class="nav nav-tabs" role="tablist">
+	<ul class="nav nav-tabs office-tabs" role="tablist">
 		<% _.each(profile.suboffices, function(office, key) { %>
-		<li class="<%- key == 0 ? 'active' : '' %>"><a href="#city<%- key %>" data-toggle="tab">[<%- office.city %>] <%- office.office_title %></a></li>
+		<li class="<%- key == 0 ? 'active' : '' %>">
+			<a href="#city<%- key %>" data-key="<%- key %>" data-toggle="tab"><%- office.city %> <%- office.office_title %></a>
+		</li>
 		<% }); %>
 	</ul>
 
@@ -30,7 +32,7 @@
 							<a href="#" class="btn tomato-btn">Contact Agent</a>
 						</div>
 						<div class="col-sm-6 col-md-6 col-lg-6">
-							<h3>Hourse:</h3>
+							<h3>Hours:</h3>
 							<p><%- office.office_hours %></p>
 						</div>
 					</div>
