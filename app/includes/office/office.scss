@@ -3,40 +3,56 @@
 	background-color: $dark-white;
 	padding: 45px 0;
 	clear: both;
-	.location {
-		width: 40%;
-		& > div {
-			padding: 0;
-		}
-		& > .address {
-			display: inline-block;
-		}
-		@include media-down(sm) {
-			width: 100%;
-		}
-	}
-	.map {
-		width: 55%;
-		height: 500px;
-		margin-top: 20px;
-	}
+
 	.image {
-		margin: 20px 0;
-		max-width: 100%;
+		margin-top: 20px;
 		display: inline-block;
-		min-height: 100px;
 		img {
-			position: absolute;
-			width: 40%;
-			left: 0;
-			bottom: 0;
+			max-width: 100%;
 		}
 	}
 	h3 {
 		margin: 20px 0;
 	}
-	.v-line {
-		position: relative;
+	.view-map {
+		text-align: right;
+		top: -30px;
+		position: absolute;
+		display: block;
+		right: 0;
+	}
+	@include media-down(sm) {
+		.map {
+			height: 210px;
+			width: 100%;
+			position: relative;
+		}
+		.image img {
+			width: 80%;
+		}
+	}	
+	@include media-up(xs) {
+		.map {
+			max-width: 100%;
+			height: 100%;
+			position: absolute !important;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+		}
+		.same-height {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			& > [class*='col-'] {
+				display: flex;
+				flex-direction: column;
+			}
+		}
 	}
 	.nav-tabs {
 		border-bottom: none;

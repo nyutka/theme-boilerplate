@@ -1,9 +1,7 @@
-<div class="my-box">
+<div class="header-name">
 	<h2>My Office</h2>
 </div>
 <div class="container">
-	<a href="#" id="view-map" target="_blank" class="pull-right hidden-sm hidden-xs"><strong>View Map and Directions</strong></a>
-
 
 	<!-- Nav tabs  class="active" -->
 	<ul class="nav nav-tabs office-tabs" role="tablist">
@@ -13,15 +11,12 @@
 		</li>
 		<% }); %>
 	</ul>
-
-	<!-- Tab panes -->
-	<div class="tab-content">
-
-		<% _.each(profile.suboffices, function(office, key) { %>
-		<div role="tabpanel" class="tab-pane <%- key == 0 ? 'active' : '' %>" id="city<%- key %>">
-			<div class="v-line">
-				<div class="map pull-right hidden-sm hidden-xs" id="map-container"></div>
-				<div class="location pull-left">
+	<div class="row same-height">
+		<!-- Tab panes -->
+		<div class="col-md-6 col-sm-8 col-sm-4-offset col-xs-12">
+			<div class="tab-content">
+				<% _.each(profile.suboffices, function(office, key) { %>
+				<div role="tabpanel" class="tab-pane <%- key == 0 ? 'active' : '' %>" id="city<%- key %>">
 					<div class="address">
 						<div class="col-sm-6 col-md-6 col-lg-6">
 							<h3>Location:</h3>
@@ -36,28 +31,23 @@
 							<p><%- office.office_hours %></p>
 						</div>
 					</div>
-					<div class="image hidden-sm hidden-xs">
+					<div class="image">
 						<img src="<%- office.office_image %>">
 					</div>
 				</div>
+				<% }); %>
 			</div>
-			<div class="visible-sm visible-xs">
-				<div class="col-sm-6 col-xs-12">
-					<img src="<%- office.office_image %>">
-				</div>
-				<div class="col-sm-6 col-xs-12">
-					<div class="map pull-right hidden-sm hidden-xs" id="map-container"></div>
-				</div>
-			</div>
-			<div class="description">
-				<h3>Vestibulum ullamcorper ligula</h3>
-				<p>Short Description About Agent: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper ligula sapien, eget rhoncus sapien congue vitae. Donec iaculis mollis ipsum ut rhoncus.</p>
-				<a href="#"><strong>Learn More About [Agent A. Agent Longname]</strong></a>
-			</div>
-
 		</div>
-		<% }); %>
-		
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			<a href="#" id="view-map" target="_blank" class="text-right view-map hidden-sm hidden-xs"><strong>View Map and Directions</strong></a>
+			<div class="map" id="map-container"></div>
+		</div>
 	</div>
 
+
+	<div class="description">
+		<h3>Vestibulum ullamcorper ligula</h3>
+		<p>Short Description About Agent: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper ligula sapien, eget rhoncus sapien congue vitae. Donec iaculis mollis ipsum ut rhoncus.</p>
+		<a href="#"><strong>Learn More About [Agent A. Agent Longname]</strong></a>
+	</div>
 </div>
