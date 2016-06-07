@@ -5,21 +5,6 @@
 		padding: 5px 20px;
 		font-size: 23px;
 	}
-	.image {
-		float: left;
-		margin: 0 20px;
-		text-align: center;
-		@include media-down(xs) {
-			float: inherit;
-		}
-		img  {
-			max-width: 280px;
-			@include media-down(xs) {
-				margin-bottom: 28px;
-				max-height: 338px;
-			}
-		}
-	}
 	.v-line > * {
 		vertical-align: top;
 	}
@@ -28,22 +13,6 @@
 	}
 	h4 {
 		font-weight: bold;
-	}
-	.boxes {
-		margin-top: 40px;
-		@include media-down(sm) {
-			display: none;
-			&:first-child {
-				display: block;
-			}
-		}
-	}
-	.caption {
-		display: table-cell;
-		padding: 0 20px;
-		@include media-down(xs) {
-			display: inline-block;
-		}
 	}
 	.link {
 		@extend .tomato-btn;

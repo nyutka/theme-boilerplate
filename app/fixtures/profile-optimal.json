@@ -80,6 +80,32 @@
         "team_member_phone_link_formatted": "343345343451",
         "team_member_fax_link_formatted": "453434534334543"
     }, {
+        "team_member_phone": "343 34534 3451",
+        "team_member_photo": "https://s3-us-west-2.amazonaws.com/hearsaysocial/francine.jpg",
+        "team_member_last_name": "Goldenberg",
+        "team_member_title": "Chief Eldan",
+        "team_member_bio": "This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio.",
+        "team_member_licenses": ["DC", "GU", "LA"],
+        "team_member_email": "eldan@eldan.eldan",
+        "team_member_location": "Your House",
+        "team_member_first_name": "Eldan",
+        "team_member_fax": "4534 345343 34543",
+        "team_member_phone_link_formatted": "343345343451",
+        "team_member_fax_link_formatted": "453434534334543"
+    },
+     {
+        "team_member_phone": "343 34534 3451",
+        "team_member_last_name": "Goldenberg",
+        "team_member_title": "Chief Eldan",
+        "team_member_bio": "This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio.",
+        "team_member_licenses": ["DC", "GU", "LA"],
+        "team_member_email": "eldan@eldan.eldan",
+        "team_member_location": "Your House",
+        "team_member_first_name": "Eldan",
+        "team_member_fax": "4534 345343 34543",
+        "team_member_phone_link_formatted": "343345343451",
+        "team_member_fax_link_formatted": "453434534334543"
+    }, {
         "team_member_phone": "4534 3451",
         "team_member_last_name": "Magoo",
         "team_member_title": "Lives in a Zoo",

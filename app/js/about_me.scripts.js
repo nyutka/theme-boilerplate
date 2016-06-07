@@ -3,12 +3,6 @@ require("./common/data-loader.js").init("optimal");
 var $ = require("jquery");
 var JSContext = require("./common/jscontext.js");
 var navigation = require("../includes/navigation/navigation.js").load();
-var profile = require("../includes/profile/profile.js").load();
-var office = require("../includes/office/office.js").load();
-var products = require("../includes/products/products.js").load();
-var events = require("../includes/events/events.js").load();
-var news = require("../includes/news/news.js").load();
-var contact = require("../includes/contact/contact.js").load();
 var footer = require("../includes/footer/footer.js").load();
 var about_me = require("../includes/about_me/about_me.js").load();
 
@@ -47,12 +41,6 @@ var getHeaderData = function () {
 var initializeTemplates = function () {
     var themeData = JSContext.getThemeData();
     navigation.init(window.JSContext);
-    profile.init(window.JSContext);
-    office.init(window.JSContext);
-    products.init(window.JSContext);
-    events.init(window.JSContext);
-    news.init(window.JSContext);
-    contact.init(window.JSContext);
     footer.init(window.JSContext);
     about_me.init(window.JSContext);
 };

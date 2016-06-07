@@ -14,6 +14,7 @@ module.exports = {
     context: path.resolve(__dirname, '../app/js'),
     entry: {
         main: "./scripts.js",
+        about_main: "./about_me.scripts.js",
         vendor: [
             "jquery",
             "underscore",

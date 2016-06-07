@@ -41,36 +41,5 @@
 			right: 0;
 			left: 0;
 		}
-		.same-height {
-			display: -webkit-box;
-			display: -webkit-flex;
-			display: -ms-flexbox;
-			display: flex;
-			flex-wrap: wrap;
-			position: relative;
-			& > [class*='col-'] {
-				display: flex;
-				flex-direction: column;
-			}
-		}
-	}
-	.nav-tabs {
-		border-bottom: none;
-		li {
-			&.active {
-				& > a, & > a:hover, & > a:focus {
-					font-weight: bold;
-					color: $nice-blue;
-				}
-			}
-			a {
-				background-color: transparent;
-				border: none;
-				padding-left: 0;
-				&:hover {
-					color: $nice-blue;
-				}
-			}
-		}
 	}
 }

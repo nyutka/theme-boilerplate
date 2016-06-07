@@ -32,7 +32,11 @@
 						</div>
 					</div>
 					<div class="image">
+						<% if (office.office_image) { %>
 						<img src="<%- office.office_image %>">
+						<% } else { %>
+						<div>description</div>
+						<% } %>
 					</div>
 				</div>
 				<% }); %>
@@ -44,7 +48,8 @@
 		</div>
 	</div>
 
-
+	<% if (office.office_image) { %>
+	<% } %>
 	<div class="description">
 		<h3>Vestibulum ullamcorper ligula</h3>
 		<p>Short Description About Agent: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper ligula sapien, eget rhoncus sapien congue vitae. Donec iaculis mollis ipsum ut rhoncus.</p>
