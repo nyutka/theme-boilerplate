@@ -1,25 +1,49 @@
-<div class="container">
-	<div class="profile about">
-
-		<div class="header-name">
-			<h2>My Office</h2>
-		</div>
-		<!-- Social Icons -->
-		<div class="hidden-sm hidden-xs pull-right social-icons">
-			<a href="<%- profile.facebook %>">
-				<img src="/images/facebook.png">
-			</a>
-			<a href="<%- profile.twitter %>">
-				<img src="/images/twitter.png">
-			</a>
-			<a href="<%- profile.linkedin %>">
-				<img src="/images/linkedin.png">
-			</a>
+<div class="header-image">
+	<div class="container">
+		<div class="profile about">
+			<div class="hidden-sm hidden-xs">
+				<div class="header-name">
+					<h2>My Office</h2>
+				</div>
+				<!-- Social Icons -->
+				<div class="pull-right social-icons">
+					<a href="<%- profile.facebook %>">
+						<img src="/images/facebook.png">
+					</a>
+					<a href="<%- profile.twitter %>">
+						<img src="/images/twitter.png">
+					</a>
+					<a href="<%- profile.linkedin %>">
+						<img src="/images/linkedin.png">
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
+</div>
+	
+<!-- Name and social icons for tablet, mobile -->
+<div class="visible-sm visible-xs name-social">
+	<div class="header-name">
+		<h2>My Office</h2>
+	</div>
+	<!-- Social Icons -->
+	<div class="pull-right social-icons">
+		<a href="<%- profile.facebook %>">
+			<img src="/images/facebook.png">
+		</a>
+		<a href="<%- profile.twitter %>">
+			<img src="/images/twitter.png">
+		</a>
+		<a href="<%- profile.linkedin %>">
+			<img src="/images/linkedin.png">
+		</a>
+	</div>
+</div>
 
-	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-10 col-sm-10 col-sm-offset-1 col-md-offset-1">
 			<!-- Profile user Name -->
 			<div class="user-name">
 				<h1><%- profile.first_name %> <%- profile.last_name%>,</h1>
@@ -37,23 +61,25 @@
 			</div>
 
 			<!-- Nav tabs  class="active" -->
-			<ul class="nav nav-tabs office-tabs" role="tablist">
-				<% _.each(profile.suboffices, function(office, key) { %>
-				<li class="<%- key == 0 ? 'active' : '' %>">
-					<a href="#city<%- key %>" data-key="<%- key %>" data-toggle="tab"><%- office.city %> <%- office.office_title %></a>
-				</li>
-				<% }); %>
-			</ul>
+			<div class="tabs-link">
+				<ul class="nav nav-tabs office-tabs" role="tablist">
+					<% _.each(profile.suboffices, function(office, key) { %>
+					<li class="<%- key == 0 ? 'active' : '' %>">
+						<a href="#city<%- key %>" data-key="<%- key %>" data-toggle="tab"><%- office.city %> <%- office.office_title %></a>
+					</li>
+					<% }); %>
+				</ul>
+			</div>
 
 			<!-- Tab content -->
 			<div class="tab-content clearfix">
 				<% _.each(profile.suboffices, function(office, key) { %>
 				<div role="tabpanel" class="tab-pane <%- key == 0 ? 'active' : '' %>" id="city<%- key %>">
 					<!-- Profile image -->
-					<div class="col-md-3">
+					<div class="col-md-3 col-sm-12 image">
 						<img src="<%- profile.profile_photo %>">
 					</div>
-					<div class="col-md-8">
+					<div class="col-md-8 col-sm-12">
 						<div class="address clearfix">
 							<div class="pull-left contact-info">
 								<div>
@@ -64,7 +90,7 @@
 								</div>
 								<div>
 									<p><strong>Landmark</strong></p>
-									Across from State Farm Insurance Corporate Headquarters
+									<p>Across from State Farm Insurance Corporate Headquarters</p>
 								</div>
 								<div>
 									<p><strong>Mailing Address</strong></p>
@@ -100,11 +126,11 @@
 			</div>
 
 			<div class="row same-height">
-				<div class="col-md-6">
+				<div class="col-md-6 col-sm-12">
 					<h3>Long Description About Agent</h3>
 					<p>This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent.</p>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 col-sm-6">
 					<a href="#" id="view-map" target="_blank" class="pull-right view-map hidden-sm hidden-xs"><strong>View Map and Directions</strong></a>
 					<div class="map" id="map-container"></div>
 				</div>
@@ -112,13 +138,13 @@
 
 			<!-- About team -->
 			<div class="row v-center">
-				<div class="col-md-6">
+				<div class="col-md-6 col-sm-6">
 					<img src="<%- profile.office_image  %>">
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 col-sm-12">
 					<div>
-					<h3>About the Team</h3>
-					<p><%- profile.whoweare_aboutus.professional %></p>
+						<h3>About the Team</h3>
+						<p><%- profile.whoweare_aboutus.professional %></p>
 					</div>
 				</div>
 			</div>
@@ -126,15 +152,23 @@
 			<!-- Team member -->
 			<div class="team-member">
 				<% _.each(profile.team_members, function(team, member) { %>
-				<div class="col-md-6">
+				<div class="col-md-6 col-sm-12">
 					<div class="boxes v-line">
 						<div class="event-box">
-							<div class="image">
-								<img src="<%- team.team_member_photo %>">
-							</div>
+							<span class="bottom">
+								<div class="image">
+									<img src="<%- team.team_member_photo %>">
+								</div>
+								<div class="mobile-name">
+									<h3><%- team.team_member_last_name %> <%- team.team_member_first_name %></h3>
+									<p><%- team.team_member_title %></p>
+								</div>
+							</span>
 							<div class="caption">
-								<h3><%- team.team_member_last_name %> <%- team.team_member_first_name %></h3>
-								<p><small><%- team.team_member_title %></small></p>
+								<div class="hidden-xs">
+									<h3><%- team.team_member_last_name %> <%- team.team_member_first_name %></h3>
+									<p><small><%- team.team_member_title %></small></p>
+								</div>
 								<p><%- team.team_member_bio %></p>
 								<a href="tel:<%- team.team_member_phone %>"><%- team.team_member_phone %></a>
 							</div>
@@ -146,8 +180,8 @@
 		</div>
 	</div>
 
-<!-- Footer -->
-	<div class="about-footer">
+	<!-- Footer -->
+	<div class="about-footer hidden-sm hidden-xs">
 		<p><strong>Disclosures</strong></p>
 		<p>Securities Supervisor address: 2702 Ireland Grove Rd , Bloomington, IL 61709-0001 Phone: 309-622-5001</p>
 		<p>State Farm Bank®, Bloomington, Illinois, is a Member FDIC and Equal Housing Lender. NMLS ID 139716. The other products offered by affiliate companies of State Farm Bank<strong> are not FDIC insured, not a State Farm Bank obligation or guaranteed by State Farm Bank, and subject to investment risk, including possible loss of principal invested.</strong> Contact State Farm Bank toll-free at 877-SF4-BANK (877-734-2265). Callers who are hearing or speech impaired should dial 711 or use a preferred Telecommunications Relay Service.</p>
@@ -161,4 +195,20 @@
 		<p>State Farm VP Management Corp. is a separate entity from those State Farm entities which provide banking and insurance products. Investing involves risk, including potential for loss.</p>
 		<p>Neither State Farm nor its agents provide tax or legal advice. Please consult a tax or legal advisor for advice regarding your personal circumstances.</p>
 	</div>
+</div>
+
+<!-- Footer for mobile and rablet -->
+<div class="about-footer visible-sm visible-xs">
+	<p><strong>Disclosures</strong></p>
+	<p>Securities Supervisor address: 2702 Ireland Grove Rd , Bloomington, IL 61709-0001 Phone: 309-622-5001</p>
+	<p>State Farm Bank®, Bloomington, Illinois, is a Member FDIC and Equal Housing Lender. NMLS ID 139716. The other products offered by affiliate companies of State Farm Bank<strong> are not FDIC insured, not a State Farm Bank obligation or guaranteed by State Farm Bank, and subject to investment risk, including possible loss of principal invested.</strong> Contact State Farm Bank toll-free at 877-SF4-BANK (877-734-2265). Callers who are hearing or speech impaired should dial 711 or use a preferred Telecommunications Relay Service.</p>
+	<div class="logo-images">
+		<img src="/images/state-farm-bank-logo.png">
+		<img src="/images/f-d-i-c-logo.png">
+		<img src="/images/equal-housing-lender-logo.png">
+	</div>
+	<p>Life Insurance and annuities are issued by State Farm Life Insurance Company. (Not Licensed in MA, NY, and WI) State Farm Life and Accident Assurance Company (Licensed in New York and Wisconsin) Home Office, Bloomington, Illinois.</p>
+	<p><strong>Before investing, consider the funds' investment objectives, risks, charges and expenses. Contact State Farm VP Management Corp., (1-800-447-4930) for a prospectus or summary prospectus con-taining this and other information. Read it carefully. AP2014/12/2170</strong></p>
+	<p>State Farm VP Management Corp. is a separate entity from those State Farm entities which provide banking and insurance products. Investing involves risk, including potential for loss.</p>
+	<p>Neither State Farm nor its agents provide tax or legal advice. Please consult a tax or legal advisor for advice regarding your personal circumstances.</p>
 </div>

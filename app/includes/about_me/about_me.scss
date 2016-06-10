@@ -1,4 +1,30 @@
 #about_me {
+	@include media-down(sm) {
+		.name-social {
+			line-height: 63px;
+			margin-top: 16px;
+			.header-name {
+				margin: 0;
+			}
+			.social-icons {
+				margin: 0;
+				margin-right: 16px;
+				a {
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+	@include media-down(xs) {
+		p {
+			font-size: 20px;
+		}
+		h3 {
+			font-size: 28px;
+			font-weight: bold;
+		}
+	}
 	.about {
 		.header-name {
 			position: absolute;
@@ -20,7 +46,12 @@
 			& + p {
 				display: inline-block;
 				margin-left: 30px;
+				@include media-down(sm) {
+					display: block;
+					margin-left: 0;
+				}
 			}
+
 		}
 	}
 	.address {
@@ -36,13 +67,39 @@
 		&:first-child {
 			margin-right: 20px;
 		}
+		@include media-down(xs) {
+			width: 45%;
+			p {
+				font-size: 18px;
+			}
+		}
 	}
-	.nav-tabs {
+	@include media-down(sm) {
+		.tabs-link {
+			text-align: center;
+		}
+		.tab-content {
+			.image {
+				text-align: center;
+				margin-bottom: 50px;
+				img {
+					max-width: 225px;
+				}
+			}
+		}
+	}
+	.nav-tabs  {
 		margin: 30px 0;
+		@include media-down(sm) {
+			display: inline-block;
+			margin: 5px 0;
+		}
 	}
 	.tab-pane > div:first-child {
 		padding-left: 0;
-		padding-right: 30px;
+		@include media-down(sm) {
+			padding-right: 30px;
+		}
 	}
 	.same-height {
 		margin-top: 35px;
@@ -59,13 +116,55 @@
 				padding-bottom: 20px;
 			}
 		}
+		@include media-down(sm) {
+			display: block;
+			& > div {
+				float: left;
+				display: block;
+			}
+		}
 	}
 	.team-member {
 		& > [class*='col-'] {
 			padding-left: 0;
 		}
+		.mobile-name {
+			display: none;
+		}
+		@include media-down(xs) {
+			.bottom {
+				display: table;
+				margin-top: 0;
+				margin-bottom: 5px;
+				.image {
+					display: table-cell;
+					float: none;
+					margin: 0;
+					img {
+						padding-right: 16px;
+						margin: 0;
+						max-width: 133px;
+					}
+				}
+				.mobile-name {
+					display: table-cell;
+					float: none;
+					vertical-align: bottom;
+					h3 {
+						font-size: 28px;
+						font-weight: bold;
+					}
+					p {
+						font-size: 18px;
+					}
+				}
+			}
+		}
 		.boxes {
 			margin-top: 60px;
+			@include media-down(sm) {
+				margin-top: 45px;
+			}
 			.caption {
 				padding: 0;
 				h3 {
@@ -78,6 +177,12 @@
 				}
 				a {
 					padding-top: 5px;
+				}
+				@include media-down(xs) {
+					float: left;
+					p {
+						font-size: 20px;
+					}
 				}
 			}
 			.image {

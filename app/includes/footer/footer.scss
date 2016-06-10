@@ -2,6 +2,7 @@
 	background-color: $tomato;
 	padding-top: 36px;
 	padding-bottom: 16px;
+	clear: both;
 	img {
 		height: $logo-height;
 		@include media-down(md) {

@@ -127,6 +127,9 @@ body {
 		color: $white;
 		text-align: center;
 		margin-bottom: 18px;
+		@include media-down(sm) {
+			padding: 9px 18px;
+		}
 	}
 	.v-center {
 		display: table;
@@ -303,7 +306,7 @@ body {
 			}
 		}
 	}
-	#profile, #about_me {
+	.header-image {
 		@include media-down(sm) {
 			background: url('/images/bg.jpg') center center no-repeat;
 			background-size: cover;
