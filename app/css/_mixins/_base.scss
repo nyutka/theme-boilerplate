@@ -240,6 +240,56 @@ body {
 			}
 		}
 	}
+	.quote-box {
+		background-color: $dark-white;
+		border-top: 10px solid $rouge;
+		padding: 15px;
+		@include media-down(xs) {
+			margin: 0 15px;
+		}
+		select {
+			padding: 4px 12px;
+		}
+		p {
+			font-size: 20px;
+			font-weight: bold;
+			small {
+				font-size: 16px;
+			}
+		}
+		.form-control {
+			margin-bottom: 8px;
+			height: 28px;
+		}
+		.zip-code {
+			#zipCode {
+				width: 76%;
+				border-radius: 0;
+				display: inline-block;
+				@include media-down(sm) {
+					width: 85%;
+				}
+			}
+			.btn-default {
+				background-color: $nice-blue;
+				color: $white;
+				height: 28px;
+				width: 22%;
+				padding: 3px;
+				font-weight: bold;
+				font-size: 14px;
+				@include media-down(sm) {
+					width: 14%;
+				}
+			}
+		}
+		.zip-code + a {
+			font-size: 11px;
+			color: $nice-blue;
+			font-weight: bold;
+			text-decoration: none;
+		}
+	}
 	.user-name {
 		text-align: left;
 		@include media-down(sm) {
@@ -386,5 +436,37 @@ body {
 			@include media-down(xs) {
 				display: inline-block;
 			}
+		}
+	}
+
+	@include media-down(sm) {
+		.name-social {
+			line-height: 63px;
+			margin-top: 16px;
+			.header-name {
+				margin: 0;
+			}
+			.social-icons {
+				margin: 0;
+				margin-right: 16px;
+				a {
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+	.about {
+		.header-name {
+			position: absolute;
+			bottom: -41px;
+			left: 0;
+			margin: 0;
+		}
+		position: relative;
+		.social-icons{
+			position: absolute;
+			right: 15px;
+			bottom: 0;
 		}
 	}

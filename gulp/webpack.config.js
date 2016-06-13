@@ -15,6 +15,7 @@ module.exports = {
     entry: {
         main: "./scripts.js",
         about_main: "./about_me.scripts.js",
+        product: "./product.scripts.js",
         vendor: [
             "jquery",
             "underscore",
