@@ -1,0 +1,53 @@
+#profile {
+	padding-bottom: 30px;	
+	.profile-info {
+		margin-top: 40px;
+		padding-bottom: 30px;
+		.address {
+			color: #000;
+			@include media-down(md) {
+				padding: 0;
+			}
+			p, a {
+				font-size: 24px;
+				color: #000;
+				@include media-down(sm) {
+					font-size: 16px;
+				}
+				@include media-down(xs) {
+					font-size: 21px;
+					font-weight: bold;
+				}
+			}
+			@include media-down(sm) {
+				text-align: center;
+				margin-top: 20px;
+				p {
+					font-size: 16px;
+				}
+			}
+		}
+		.description {
+			p {
+				@include media-down(sm) {
+					margin: 25px 0;
+				}
+				@include media-down(xs) {
+					font-size: 21px;
+				}
+			}
+		}
+		.quote-box + a {
+			font-size: 13px;
+			color: $nice-blue;
+			margin-top: 10px;
+			display: block;
+			@include media-down(xs) {
+				margin: 10px 10px;
+			}
+			@include media-down(sm) {
+				padding-bottom: 30px;
+			}
+		}
+	}
+}

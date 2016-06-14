@@ -1,2 +1,64 @@
 $fa-font-path: "../fonts";
 @import "./node_modules/font-awesome/scss/font-awesome";
+
+$screen-xs: 0;
+$screen-sm: 616px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+// set Bootstrap navbar collapse breakpoint
+$grid-float-breakpoint: $screen-md;
+
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.container {
+	@media (min-width: $screen-sm) {
+		width: auto;
+	}
+	@media (min-width: $screen-md) {
+		width: auto;
+	}
+	@media (min-width: $screen-lg) {
+		width: $container-md;
+	}
+	@media (min-width: $screen-xl) {
+		width: $container-lg;
+	}
+}
+
+
+// $screen-xs:                  480px !default;
+
+// // Small screen / tablet
+// //** Deprecated `$screen-sm` as of v3.0.1
+// $screen-sm:                  768px !default;
+// $screen-sm-min:              $screen-sm !default;
+
+// // Medium screen / desktop
+// //** Deprecated `$screen-md` as of v3.0.1
+// $screen-md:                  992px !default;
+// $screen-md-min:              $screen-md !default;
+
+// // Large screen / wide desktop
+// //** Deprecated `$screen-lg` as of v3.0.1
+// $screen-lg:                  1200px !default;
+// $screen-lg-min:              $screen-lg !default;
+
+// // So media queries don't overlap when required, provide a maximum
+// $screen-xs-max:              ($screen-sm-min - 1) !default; = 767
+// $screen-sm-max:              ($screen-md-min - 1) !default; = 991
+// $screen-md-max:              ($screen-lg-min - 1) !default; = 1199
+
+
+
+// container {
+// 	> 1200: 1170, > $screen-lg-min:
+// 	> 992: 970, > $screen-md-min:
+// 	> 768: 750, > $screen-sm-min:
+// }
+
+// <= 768
+// <= 616
+
+

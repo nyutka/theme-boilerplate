@@ -1,0 +1,40 @@
+#events {
+	background-color: $dark-white;
+	padding: 45px 0;
+	.tomato-btn {
+		padding: 5px 20px;
+		font-size: 23px;
+	}
+	.v-line > * {
+		vertical-align: top;
+	}
+	p {
+		margin: 20px 0;
+	}
+	h4 {
+		font-weight: bold;
+	}
+	.link {
+		@extend .tomato-btn;
+	}
+	.phone {
+		&:before {
+			content: "Call "
+		}
+		font-weight: bold;
+		font-size: 16px;
+		color: $black;
+	}
+	.horizontal {
+		h4 {
+			margin-top: 15px;
+		}
+		a {
+			color: $black;
+			font-weight: bold;
+		}
+		& > .caption, & > img {
+			max-width: 320px;
+		}
+	}
+}

@@ -1,11 +1,11 @@
 var Module = require("theme_module_loader");
 var JSContext = require("../../js/common/jscontext.js");
-var htmlTemplate = require("./example.html");
+var htmlTemplate = require("./footer.html");
 var callback = function(){};
 module.exports = {
     load: function() {
         var args = {
-            id: "example",
+            id: "footer",
             /* the div id to which the module will be appended */
             htmlTemplate: htmlTemplate,
             /* the Underscore template that will be used by the module */

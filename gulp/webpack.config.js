@@ -14,6 +14,8 @@ module.exports = {
     context: path.resolve(__dirname, '../app/js'),
     entry: {
         main: "./scripts.js",
+        about_main: "./about_me.scripts.js",
+        product: "./product.scripts.js",
         vendor: [
             "jquery",
             "underscore",
@@ -22,7 +24,9 @@ module.exports = {
             "mapbox",
             "theme_module_loader",
             "cssmodal",
-            "dotdotdot"
+            "dotdotdot",
+            "slick",
+            "sidr"
         ]
     },
     resolve: {
@@ -30,11 +34,13 @@ module.exports = {
             jquery: path.join(__dirname, "../node_modules/jquery/dist/jquery.js"),
             underscore: path.join(__dirname, "../node_modules/underscore/underscore.js"),
             moment: path.join(__dirname, "../node_modules/moment/moment.js"),
-            bootstrap: path.join(__dirname, "../node_modules/bootstrap/dist/js/bootstrap.js"),
+            bootstrap: path.join(__dirname, "../node_modules/bootstrap-sass/assets/javascripts/bootstrap.js"),
             mapbox: path.join(__dirname, "../node_modules/mapbox.js"),
             dotdotdot: path.join(__dirname, "../node_modules/dotdotdot/src/js/jquery.dotdotdot.js"),
             theme_module_loader: path.join(__dirname, "../app/js/common/module-loader.js"),
-            cssmodal: path.join(__dirname, "../node_modules/css-modal/modal.js")
+            cssmodal: path.join(__dirname, "../node_modules/css-modal/modal.js"),
+            slick: path.join(__dirname, "../node_modules/slick-carousel/slick/slick.js"),
+            sidr: path.join(__dirname, "../node_modules/sidr/dist/jquery.sidr.js")
         },
     },
     module: {
