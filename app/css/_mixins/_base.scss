@@ -364,8 +364,7 @@ body {
 			margin-top: 58px;
 		}
 		@include media-down(xs) {
-			background: none;
-			height: auto;	
+			height: 225px;	
 		}
 		.profile {
 			background: url('/images/bg.jpg') center center no-repeat;

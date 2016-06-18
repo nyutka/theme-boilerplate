@@ -21,9 +21,9 @@ var Module = function(args) {
     },
 
     this.inject = function(renderedTemplate) {
-        var $container = $("#" + this.id);
+        this.$container = $("#" + this.id);
         // Append rendered module in the container element in the DOM
-        $container.append(renderedTemplate);
+        this.$container.append(renderedTemplate);
         console.log(this.id + " loaded.");
     }
 
@@ -43,7 +43,7 @@ var Module = function(args) {
         this.inject(renderedTemplate);
 
         // Execute any module specific javascript
-        this.callback();
+        this.callback(this);
     }
 
 };

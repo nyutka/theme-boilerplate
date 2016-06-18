@@ -1,5 +1,11 @@
-#profile {
-	padding-bottom: 30px;	
+#sf_profile {
+	padding-bottom: 30px;
+	.header-image {
+		@include media-down(xs) {
+			height: inherit;
+			background-image: none;	
+		}
+	}	
 	.profile-info {
 		margin-top: 40px;
 		padding-bottom: 30px;

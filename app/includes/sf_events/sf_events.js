@@ -1,15 +1,13 @@
 var Module = require("theme_module_loader");
 var JSContext = require("../../js/common/jscontext.js");
-var ContactForm = require("../../js/common/contact-form.js");
-var htmlTemplate = require("./contact.html");
+var htmlTemplate = require("./sf_events.html");
 var callback = function() {
     var Profile = JSContext.getProfile();
-    ContactForm.activate('http://test.api.com/', Profile.slug);
 };
 module.exports = {
     load: function() {
         var args = {
-            id: "contact",
+            id: "sf_events",
             /* the div id to which the module will be appended */
             htmlTemplate: htmlTemplate,
             /* the Underscore template that will be used by the module */
