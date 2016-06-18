@@ -1,0 +1,65 @@
+#sf_office {
+	background-color: $dark-white;
+	padding: 45px 0;
+	clear: both;
+
+	.image {
+		margin-top: 20px;
+		display: inline-block;
+		img {
+			max-width: 100%;
+			@include media-down(sm) {
+				max-width: 80%;
+				height: 210px;
+			}
+			@include media-down(xs) {
+				max-width: 100%;
+				height: inherit;
+			}
+		}
+		@include media-down(xs) {
+			margin: 20px 0;
+		} 
+	}
+	h3 {
+		margin: 20px 0;
+	}
+	.view-map {
+		text-align: right;
+		top: -30px;
+		position: absolute;
+		display: block;
+		right: 0;
+		@include media-down(sm) {
+			right: 15px;
+		}
+		@include media-down(xs) {
+			position: initial;
+		}
+	}
+	.map-box {
+		@include media-down(sm) {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 50%;
+		}
+		@include media-down(xs) {
+			position: inherit;
+			width: 100%;
+		}
+	}
+	.map {
+		height: 100%;
+		@include media-down(sm) {
+			height: 210px;
+			width: 100%;
+			padding-left: 15px;
+		}
+		@include media-down(xs) {
+			max-width: 100%;
+			height: 240px;
+			margin-top: 5px;
+		}
+	}
+}

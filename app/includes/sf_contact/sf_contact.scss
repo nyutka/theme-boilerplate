@@ -1,4 +1,4 @@
-#contact {
+#sf_contact {
 	background-color: $dark-white;
 	padding: 45px 0;
 	min-height: 100%;
@@ -126,8 +126,14 @@
 	}
 	.thank-you {
 		text-align: center;
-		height: 100%;
+		height: 49vh;
 		display: none;
+		@include media-down(sm) {
+			height: 51vh;
+		}
+		@include media-down(xs) {
+			height: 56vh;
+		}
 		h2 {
 			font-size: 48px;
 			margin-top: 115px;

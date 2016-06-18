@@ -1,0 +1,56 @@
+#sf_news {
+	padding: 45px 0;
+	.same-height {
+		@include media-down(sm) {
+			& > div {
+				display: none;
+			}
+			& > div:first-child {
+				display: block;
+			}
+		}
+	}
+}
+.news {
+	a .caption {
+		color: $black;
+	}
+	.news-card {
+		display: block;
+		@include media-down(lg) {
+			margin: 30px 20px 0 20px;
+		}
+		@include media-down(md) {
+			margin: 30px 10px 0 10px;
+		}
+		h4 {
+			font-weight: bold;
+			margin-bottom: 17px;
+		}
+		img {
+			margin-top: 20px;
+		}
+		.image {
+			img {
+				max-width: 100%;
+				margin-bottom: 15px;
+				@include media-down(xs) {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.same-height {
+		@include media-up(md) {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			flex-wrap: wrap;
+				& > [class*='col-'] {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	}
+}

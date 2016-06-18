@@ -1,9 +1,8 @@
 var Module = require("theme_module_loader");
 var JSContext = require("../../js/common/jscontext.js");
 var MapTools = require("../../js/common/map-tools.js");
-var htmlTemplate = require("./office.html");
+var htmlTemplate = require("./sf_office.html");
 var callback = function() {
-
     var suboffices = JSContext.getProfile().suboffices;
     var $viewMap = $('#view-map');
     var currentKey = 0;
@@ -41,7 +40,7 @@ var callback = function() {
 module.exports = {
     load: function() {
         var args = {
-            id: "office",
+            id: "sf_office",
             /* the div id to which the module will be appended */
             htmlTemplate: htmlTemplate,
             /* the Underscore template that will be used by the module */

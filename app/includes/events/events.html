@@ -1,27 +1,68 @@
-<div class="header-name">
-	<h2 class="visible-lg visible-md">Upcoming Events</h2>
-	<h2 class="visible-sm visible-xs">Events</h2>
-</div>
-
-<div class="container">
-	<% _.each(events, function(event, key) { %>
-		<% if (key > 1) return; %>
-		<div class="boxes v-line">
-			<div class="event-box">
-				<div class="image">
-					<img src="<%- event.photo %>">
+<div class="header-image">
+	<div class="container">
+		<div class="profile about">
+			<div class="hidden-sm hidden-xs">
+				<div class="header-name">
+					<h2>Upcoming Events</h2>
 				</div>
-				<div class="caption">
-					<h4><%- event.event_name %></h4>
-					<time><%- event.formattedDate %></time>
-					<p><%- event.details %></p>
-					<a href="<%- event.rsvp_link %>" class="<%- event.rsvp_type %>"><%- event.rsvp_info %></a>
+				<!-- Social Icons -->
+				<div class="pull-right social-icons">
+					<a href="<%- profile.facebook %>">
+						<img src="/images/facebook.png">
+					</a>
+					<a href="<%- profile.twitter %>">
+						<img src="/images/twitter.png">
+					</a>
+					<a href="<%- profile.linkedin %>">
+						<img src="/images/linkedin.png">
+					</a>
 				</div>
 			</div>
 		</div>
-	<% }); %>
+	</div>
+</div>
+	
+<!-- Name and social icons for tablet, mobile -->
+<div class="visible-sm visible-xs name-social">
+	<div class="header-name">
+		<h2>Events</h2>
+	</div>
+	<!-- Social Icons -->
+	<div class="pull-right social-icons">
+		<a href="<%- profile.facebook %>">
+			<img src="/images/facebook.png">
+		</a>
+		<a href="<%- profile.twitter %>">
+			<img src="/images/twitter.png">
+		</a>
+		<a href="<%- profile.linkedin %>">
+			<img src="/images/linkedin.png">
+		</a>
+	</div>
+</div>
 
-	<div class="text-right">
-		<a href="#"><strong>More Events</strong></a>
+<div class="container sf-events">
+	<div class="col-md-10 col-md-offset-1 col-xs-12">
+		<% _.each(events, function(event, key) { %>
+			<div class="boxes v-line <% if (key > 1) { %>hidden-xs hidden-sm<% } %>">
+				<div class="event-box">
+					<div class="image">
+						<img src="<%- event.photo %>">
+					</div>
+					<div class="caption">
+						<h4><%- event.event_name %></h4>
+						<time><%- event.formattedDate %></time>
+						<p><%- event.details %></p>
+						<a href="<%- event.rsvp_link %>" class="<%- event.rsvp_type %>"><%- event.rsvp_info %></a>
+					</div>
+				</div>
+			</div>
+		<% }); %>
+
+		<% if (events.length > 2) { %>
+		<div class="text-right more-events">
+			<a class="load-more" href="#"><strong>More Events</strong></a>
+		</div>
+		<% } %>
 	</div>
 </div>

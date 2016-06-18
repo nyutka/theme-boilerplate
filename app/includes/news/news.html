@@ -1,28 +1,72 @@
-<div class="header-name">
-	<h2>News and Education</h2>
+<div class="header-image">
+	<div class="container">
+		<div class="profile about">
+			<div class="hidden-sm hidden-xs">
+				<div class="header-name">
+					<h2>News and Education</h2>
+				</div>
+				<!-- Social Icons -->
+				<div class="pull-right social-icons">
+					<a href="<%- profile.facebook %>">
+						<img src="/images/facebook.png">
+					</a>
+					<a href="<%- profile.twitter %>">
+						<img src="/images/twitter.png">
+					</a>
+					<a href="<%- profile.linkedin %>">
+						<img src="/images/linkedin.png">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+<!-- Name and social icons for tablet, mobile -->
+<div class="visible-sm visible-xs name-social">
+	<div class="header-name">
+		<h2>News and Education</h2>
+	</div>
+	<!-- Social Icons -->
+	<div class="pull-right social-icons">
+		<a href="<%- profile.facebook %>">
+			<img src="/images/facebook.png">
+		</a>
+		<a href="<%- profile.twitter %>">
+			<img src="/images/twitter.png">
+		</a>
+		<a href="<%- profile.linkedin %>">
+			<img src="/images/linkedin.png">
+		</a>
+	</div>
 </div>
 
-<div class="container">
-	<div class="row same-height">
-	<% _.each(posts, function(post, number) { %>
-		<% if (number > 2) return; %>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-			<a href="<%- post.link %>" class="news-card">
-				<div class="row">
-					<div class="col-sm-4 col-md-12">
-						<img src="<%- post.image %>">
+<div class="container news">
+	<div class="row">
+		<div class="col-md-10 col-sm-10 col-sm-offset-1 col-md-offset-1">
+			<div class="row same-height">
+				<% _.each(posts, function(post, number) { %>
+					<div class="col-sm-6 col-md-4 col-lg-4 box <% if (number > 1) { %>hidden-xs hidden-sm<% } %>">
+						<a href="<%- post.link %>" class="news-card">
+							<div class="row">
+								<div class=" col-md-12">
+									<img src="<%- post.image %>">
+								</div>
+								<div class="caption col-md-12">
+									<h4><%- post.link_title %></h4>
+									<p><%- post.message %></p>
+								</div>
+							</div>
+						</a>
 					</div>
-					<div class="caption col-sm-8 col-md-12">
-						<h4><%- post.link_title %></h4>
-						<p><%- post.message %></p>
-					</div>
-				</div>
-			</a>
+				<% }); %>
+			</div>
 		</div>
-	<% }); %>
 	</div>
 
-	<div class="text-right">
-		<a href="#"><strong>Read More News</strong></a>
-	</div>
+	<% if (posts.length > 2) { %>
+		<div class="text-right more-events">
+			<a class="load-more" href="#"><strong>More Events</strong></a>
+		</div>
+	<% } %>
 </div>

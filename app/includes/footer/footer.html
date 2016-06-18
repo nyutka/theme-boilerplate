@@ -2,17 +2,17 @@
   <img src="/images/logo.png">
   <div>
     <ul>
-      <li><a href="#profile">About Me |</li></a>
-      <li><a href="#products">Products |</li></a>
-      <li><a href="#events">Events |</li></a>
-      <li><a href="#news">News |</li></a>
-      <li><a href="#contact">Contact Me |</li></a>
+      <li><a href="about_me.html">About Me |</li></a>
+      <li><a href="product.html">Products |</li></a>
+      <li><a href="events.html">Events |</li></a>
+      <li><a href="news.html">News |</li></a>
+      <li><a href="/#sf_contact">Contact Me |</li></a>
       <li><a href="#">Privacy Policy |</li></a>
       <li><a href="#">Get a Quote |</li></a>
-      <li><a href="#">My Account</li></a>
+      <li><a href="https://oams.state-farm.com/auth/UI/Login/">My Account</li></a>
       <br>
-      <li><a href="#">Agent A. Agent Longname State Farm Site |</li></a>
-      <li><a href="#">Call us anytime at (309) 123-4567</li></a>
+      <li><a href="#">Agent <%- profile.first_name %> <%- profile.last_name%>, State Farm Site |</li></a>
+      <li><a href="#">Call us anytime at <%- profile.phones.phone %></li></a>
     </ul>
   </div>
 </div>
