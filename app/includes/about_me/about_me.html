@@ -60,8 +60,8 @@
 				<h3><%- profile.title %></h3>
 			</div>
 
-			<!-- Nav tabs  class="active" -->
-			<div class="tabs-link">
+			<div class="mobile-tabs">
+				<!-- Nav tabs  class="active" -->
 				<ul class="nav nav-tabs office-tabs" role="tablist">
 					<% _.each(profile.suboffices, function(office, key) { %>
 					<li class="<%- key == 0 ? 'active' : '' %>">
@@ -70,75 +70,79 @@
 					<% }); %>
 				</ul>
 			</div>
-
-			<!-- Tab content -->
+			<!-- Tab panes -->
 			<div class="tab-content clearfix">
 				<% _.each(profile.suboffices, function(office, key) { %>
 				<div role="tabpanel" class="tab-pane <%- key == 0 ? 'active' : '' %>" id="city<%- key %>">
 					<!-- Profile image -->
-					<div class="col-md-3 col-sm-12 image">
-						<img src="<%- profile.profile_photo %>">
-					</div>
-					<div class="col-md-8 col-sm-12">
-						<div class="address clearfix">
-							<div class="pull-left contact-info">
-								<div>
-									<p><strong>Street Address</strong></p>
-									<p><%- office.street %></p>
-									<!-- <p>Optional Line 2</p> -->
-									<p><%- office.city %>, <%- office.state %>, <%- office.suite %> <%- office.zip_code %></p>
+					<div class="row">
+						<div class="col-md-3 col-sm-12 image">
+							<img src="<%- profile.profile_photo %>">
+						</div>
+						<div class="col-md-8 col-sm-12">
+							<div class="address clearfix">
+								<div class="pull-left contact-info">
+									<div>
+										<p><strong>Street Address</strong></p>
+										<p><%- office.street %></p>
+										<!-- <p>Optional Line 2</p> -->
+										<p><%- office.city %>, <%- office.state %>, <%- office.suite %> <%- office.zip_code %></p>
+									</div>
+									<div>
+										<p><strong>Landmark</strong></p>
+										<p>Across from State Farm Insurance Corporate Headquarters</p>
+									</div>
+									<div>
+										<p><strong>Mailing Address</strong></p>
+										<p><%- office.street %></p>
+										<!-- <p>Optional Line 2</p> -->
+										<p><%- office.city %>, <%- office.state %>, <%- office.suite %> <%- office.zip_code %></p>
+									</div>
+									<div>
+										<p><strong>Office Phone:</strong> <%- office.phone %></p>
+										<p><strong>Fax:</strong> <%- office.fax %></p>
+										<p><strong>Cell Phone:</strong> <%- office.cell %></p>
+										<p><strong>Toll Free:</strong> <%- office.toll_free %></p>
+									</div>
 								</div>
-								<div>
-									<p><strong>Landmark</strong></p>
-									<p>Across from State Farm Insurance Corporate Headquarters</p>
-								</div>
-								<div>
-									<p><strong>Mailing Address</strong></p>
-									<p><%- office.street %></p>
-									<!-- <p>Optional Line 2</p> -->
-									<p><%- office.city %>, <%- office.state %>, <%- office.suite %> <%- office.zip_code %></p>
-								</div>
-								<div>
-									<p><strong>Office Phone:</strong> <%- office.phone %></p>
-									<p><strong>Fax:</strong> <%- office.fax %></p>
-									<p><strong>Cell Phone:</strong> <%- office.cell %></p>
-									<p><strong>Toll Free:</strong> <%- office.toll_free %></p>
-								</div>
-							</div>
-							<div class="pull-right contact-info">
-								<div>
-									<p><strong>Office Hours</strong></p>
-									<p><%- office.office_hours %></p>
-								</div>
-								<div>
-									<p><strong>Languages</strong></p>
-									<p><%- office.language %></p>
-								</div>
-								<div>
-									<p><strong>License</strong></p>
-									<p><%- office.license %></p>
+								<div class="pull-right contact-info">
+									<div>
+										<p><strong>Office Hours</strong></p>
+										<p><%- office.office_hours %></p>
+									</div>
+									<div>
+										<p><strong>Languages</strong></p>
+										<p><%- office.language %></p>
+									</div>
+									<div>
+										<p><strong>License</strong></p>
+										<p><%- office.license %></p>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<% }); %>
-			</div>
 
-			<div class="row same-height">
-				<div class="col-md-6 col-sm-12">
-					<h3>Long Description About Agent</h3>
-					<p>This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent.</p>
-				</div>
-				<div class="col-md-6 col-sm-6">
-					<a href="#" id="view-map" target="_blank" class="text-right view-map hidden-sm hidden-xs"><strong>View Map and Directions</strong></a>
-					<div class="map" id="map-container"></div>
+				<div class="row same-height">
+					<div class="col-md-6 col-sm-12 long-description">
+						<h3>Long Description About Agent</h3>
+						<p>This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent.</p>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-12 map-box">
+						<a href="#" id="view-map" target="_blank" class="text-right view-map "><strong>View Map and Directions</strong></a>
+						<div class="map" id="map-container"></div>
+					</div>
+					<div class="col-sm-6 col-xs-12 visible-sm visible-xs">
+						<img src="<%- profile.office_image  %>">
+					</div>
 				</div>
 			</div>
 
 			<!-- About team -->
 			<div class="row v-center">
-				<div class="col-md-6 col-sm-6">
+				<div class="col-md-6 hidden-sm hidden-xs">
 					<img src="<%- profile.office_image  %>">
 				</div>
 				<div class="col-md-6 col-sm-12">

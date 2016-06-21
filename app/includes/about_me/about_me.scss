@@ -68,6 +68,11 @@
 			margin: 5px 0;
 		}
 	}
+	.mobile-tabs {
+		@include media-down(sm) {
+			text-align: center;
+		}
+	}
 	.tab-pane > div:first-child {
 		padding-left: 0;
 		@include media-down(sm) {
@@ -96,6 +101,35 @@
 				display: block;
 			}
 		}
+	}
+	.view-map {
+		position: absolute;
+		top: -25px;
+		right: 0;
+		@include media-down(sm) {
+			left: 0;
+			right: inherit;
+		}
+		@include media-down(xs) {
+			left: 25px;
+		}
+	}
+	.map {
+		height: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		@include media-down(xs) {
+			height: 250px;
+			position: relative;
+			margin-bottom: 20px;
+		}
+
+	}
+	.long-description{
+		padding-bottom: 50px;
 	}
 	.team-member {
 		& > [class*='col-'] {
