@@ -1,3 +1,5 @@
 {
-    "header_headline": "Hello, world"
+    "header_headline": "Hello, world",
+    "designation_tooltip_header": "What is this?",
+    "designation_tooltip_body": "The letters you see after my name represent advanced industry designations, certifications, or licensing I’ve completed to serve you better."
 }

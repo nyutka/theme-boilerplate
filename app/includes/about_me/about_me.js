@@ -9,7 +9,7 @@ var callback = function() {
 
     updateMap();
 
-    $('.office-tabs a[data-toggle="tab"]').off().on('shown.bs.tab', function (e) {
+    $('.office-tabs a[data-toggle="tab"]').off().on('shown.bs.tab', function(e) {
         currentKey = $(e.target).data('key');
         updateMap();
     });
@@ -24,7 +24,7 @@ var callback = function() {
         if (!marker.getPopup()) {
             var href = getGoogleMap();
             var address = getAddress();
-            var content = '<a target="_blank" href="'+ href +'">' + address + '</a>';
+            var content = '<a target="_blank" href="' + href + '">' + address + '</a>';
             marker.bindPopup(content).openPopup();
         }
     }
@@ -32,6 +32,7 @@ var callback = function() {
     function getGoogleMap() {
         return 'http://maps.google.com/?q=' + encodeURIComponent(getAddress());
     }
+
     function getAddress() {
         var office = suboffices[currentKey];
         return office.street + ', ' + office.city + ' ' + office.state + ', ' + office.zip_code;
@@ -49,4 +50,4 @@ module.exports = {
 
         return new Module(args);
     }
-}
+};

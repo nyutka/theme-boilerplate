@@ -9,32 +9,42 @@
 
 				<!-- Profile user Name -->
 				<div class="col-lg-8 col-md-9 hidden-sm hidden-xs user-name">
-					<h1><%- profile.first_name %> <%- profile.last_name%></h1>
-					<p><%- profile.designations %>
+					<h1><%- profile.full_name%></h1>
+					<p><% _.each(profile.licenses, function(license, key) { %>
+						<%- license.license_name %> 
+						<% if(key < profile.licenses.length - 1 ) { %>, <% } %>
+					<% }); %>
 						<button type="button" class="empty-btn">
 							<div class="designations-popup">
 								<div class="popup-content">
-									<h5>What Are Designations?</h5>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper ligula sapien, eget rhoncus sapien congue vitae. Donec iaculis mollis ipsum ut rhoncus. Learn More</p>
+									<h5><%- theme_data.designation_tooltip_header %></h5>
+								<p><%- theme_data.designation_tooltip_body %></p>
 								</div>
 							</div>
 						</button>
 					</p>
-					<h3><%- profile.title %>
+					<h3>
+						<h5>State Farm<sup>&reg;</sup> Insurance Agent</h5>
+					</h3>
 
 						<!-- Social Icons -->
 						<div class="hidden-sm hidden-xs pull-right social-icons">
-							<a href="<%- profile.facebook %>">
+							<% if (profile.networks.facebook_id ) { %>
+							<a href="<%- profile.networks.facebook_id %>">
 								<img src="/images/facebook.png">
 							</a>
-							<a href="<%- profile.twitter %>">
+							<% } %>
+							<% if (profile.networks.twitter_id ) { %>
+							<a href="<%- profile.networks.twitter_id %>">
 								<img src="/images/twitter.png">
 							</a>
-							<a href="<%- profile.linkedin %>">
+							<% } %>
+							<% if (profile.networks.linkedin_id ) { %>
+							<a href="<%- profile.networks.linkedin_id %>">
 								<img src="/images/linkedin.png">
 							</a>
+							<% } %>
 						</div>
-					</h3>
 				</div>
 
 			</div>
@@ -45,60 +55,74 @@
 
 				<!-- Profile user's Name for mobile -->
 				<div class="col-sm-12 col-xs-12 text-center visible-sm  visible-xs user-name">
-					<h1><%- profile.first_name %> <%- profile.last_name%></h1>
-					<p><%- profile.designations %>
+					<h1><%- profile.full_name%></h1>
+					<p><% _.each(profile.licenses, function(license, key) { %>
+						<%- license.license_name  %> 
+					<% }) %>
 						<button type="button" class="empty-btn">
 							<div class="designations-popup">
 								<div class="popup-content">
-									<h5>What Are Designations?</h5>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper ligula sapien, eget rhoncus sapien congue vitae. Donec iaculis mollis ipsum ut rhoncus. Learn More</p>
+									<h5><%- theme_data.designation_tooltip_header %></h5>
+								<p><%- theme_data.designation_tooltip_body %></p>
 								</div>
 							</div>
 						</button>
 					</p>
-					<h3><%- profile.title %></h3>
+					<h3><h5>State Farm<sup>&reg;</sup> Insurance Agent</h5></h3>
 				</div>
 				<!-- End -->
 
 				<!-- Social Icons for mobile-->
 				<div class="col-xs-12 visible-xs text-center social-icons">
-					<a href="<%- profile.facebook %>">
+					<% if (profile.networks.facebook_id ) { %>
+					<a href="<%- profile.networks.facebook_id %>">
 						<img src="/images/facebook.png">
 					</a>
-					<a href="<%- profile.twitter %>">
+					<% } %>
+					<% if (profile.networks.twitter_id ) { %>
+					<a href="<%- profile.networks.twitter_id %>">
 						<img src="/images/twitter.png">
 					</a>
-					<a href="<%- profile.linkedin %>">
+					<% } %>
+					<% if (profile.networks.linkedin_id ) { %>
+					<a href="<%- profile.networks.linkedin_id %>">
 						<img src="/images/linkedin.png">
 					</a>
+					<% } %>
 				</div>
 
 				<!-- Address -->
 				<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12 address">
-					<p><%- profile.address.street %></p> 
+					<p><%- profile.suboffices[0].street %></p> 
 					<!-- <p>Optional Line 2</p> -->
-					<p><%- profile.address.city %>, <%- profile.address.state %> <%- profile.address.zip_code %></p>
-					<p><a href="tel:<%- profile.phones.phone_link_formatted %>" title="<%- profile.phones.phone %>"><%- profile.phones.phone %></a></p>
+					<p><%- profile.suboffices[0].city %>, <%- profile.suboffices[0].state %> <%- profile.suboffices[0].zip_code %></p>
+					<p><a href="tel:<%- profile.suboffices[0].phone %>" title="<%- profile.suboffices[0].phone %>"><%- profile.suboffices[0].phone %></a></p>
 				</div>
 				<!-- End -->
 
 				<!-- Social Icons for tablet-->
 				<div class="col-sm-12 visible-sm text-center social-icons">
-					<a href="<%- profile.facebook %>">
+					<% if (profile.networks.facebook_id ) { %>
+					<a href="<%- profile.networks.facebook_id %>">
 						<img src="/images/facebook.png">
 					</a>
-					<a href="<%- profile.twitter %>">
+					<% } %>
+					<% if (profile.networks.twitter_id ) { %>
+					<a href="<%- profile.networks.twitter_id %>">
 						<img src="/images/twitter.png">
 					</a>
-					<a href="<%- profile.linkedin %>">
+					<% } %>
+					<% if (profile.networks.linkedin_id ) { %>
+					<a href="<%- profile.networks.linkedin_id %>">
 						<img src="/images/linkedin.png">
 					</a>
+					<% } %>
 				</div>
 				<!-- End -->
 
 				<!-- Description -->
 				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 description">
-					<p><%- profile.professional_summary %></p>
+					<p>MISSION STATEMENT: <%- profile.mission_statement %></p>
 				</div>
 				<!-- End -->
 

@@ -15,7 +15,7 @@ module.exports = {
             /* the Underscore template that will be used by the module */
             callback: callback /* a function to execute after the module has been rendered. Wrap there any javascript for the module */
         };
-
+        
         return new Module(args);
     }
 }

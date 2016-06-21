@@ -7,15 +7,21 @@
 				</div>
 				<!-- Social Icons -->
 				<div class="pull-right social-icons">
-					<a href="<%- profile.facebook %>">
+					<% if (profile.networks.facebook_id ) { %> 
+					<a href="<%- profile.networks.facebook_id %>">
 						<img src="/images/facebook.png">
 					</a>
-					<a href="<%- profile.twitter %>">
+					<% } %>
+					<% if (profile.networks.twitter_id ) { %> 
+					<a href="<%- profile.networks.twitter_id %>">
 						<img src="/images/twitter.png">
 					</a>
-					<a href="<%- profile.linkedin %>">
+					<% } %>
+					<% if (profile.networks.linkedin_id ) { %> 
+					<a href="<%- profile.networks.linkedin_id %>">
 						<img src="/images/linkedin.png">
 					</a>
+					<% } %>
 				</div>
 			</div>
 		</div>
@@ -29,15 +35,21 @@
 	</div>
 	<!-- Social Icons -->
 	<div class="pull-right social-icons">
-		<a href="<%- profile.facebook %>">
+		<% if (profile.networks.facebook_id ) { %>
+		<a href="<%- profile.networks.facebook_id %>">
 			<img src="/images/facebook.png">
 		</a>
-		<a href="<%- profile.twitter %>">
+		<% } %>
+		<% if (profile.networks.twitter_id ) { %>
+		<a href="<%- profile.networks.twitter_id %>">
 			<img src="/images/twitter.png">
 		</a>
-		<a href="<%- profile.linkedin %>">
+		<% } %>
+		<% if (profile.networks.linkedin_id ) { %>
+		<a href="<%- profile.networks.linkedin_id %>">
 			<img src="/images/linkedin.png">
 		</a>
+		<% } %>
 	</div>
 </div>
 
@@ -46,18 +58,21 @@
 		<div class="col-md-10 col-sm-10 col-sm-offset-1 col-md-offset-1">
 			<!-- Profile user Name -->
 			<div class="user-name">
-				<h1><%- profile.first_name %> <%- profile.last_name%>,</h1>
-				<p><%- profile.designations %>
+				<h1><%- profile.full_name %>,</h1>
+				<p><% _.each(profile.licenses, function(license, key) { %>
+						<%- license.license_name  %>
+						<% if(key < profile.licenses.length - 1 ) { %>, <% } %>
+					<% }); %>
 					<button type="button" class="empty-btn">
 						<div class="designations-popup">
 							<div class="popup-content">
-								<h5>What Are Designations?</h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper ligula sapien, eget rhoncus sapien congue vitae. Donec iaculis mollis ipsum ut rhoncus. Learn More</p>
+								<h5><%- theme_data.designation_tooltip_header %></h5>
+								<p><%- theme_data.designation_tooltip_body %></p>
 							</div>
 						</div>
 					</button>
 				</p>
-				<h3><%- profile.title %></h3>
+				<h5>State Farm<sup>&reg;</sup> Insurance Agent</h5>
 			</div>
 
 			<div class="mobile-tabs">
@@ -65,7 +80,7 @@
 				<ul class="nav nav-tabs office-tabs" role="tablist">
 					<% _.each(profile.suboffices, function(office, key) { %>
 					<li class="<%- key == 0 ? 'active' : '' %>">
-						<a href="#city<%- key %>" data-key="<%- key %>" data-toggle="tab"><%- office.city %> <%- office.office_title %></a>
+						<a href="#city<%- key %>" data-key="<%- key %>" data-toggle="tab"><%- office.city %></a>
 					</li>
 					<% }); %>
 				</ul>
@@ -112,11 +127,12 @@
 									</div>
 									<div>
 										<p><strong>Languages</strong></p>
-										<p><%- office.language %></p>
+										<p><%- profile.languages.join(', ') %></p>
 									</div>
 									<div>
-										<p><strong>License</strong></p>
-										<p><%- office.license %></p>
+										<% _.each(profile.licenses, function(license, key) { %>
+									<p><strong>License:</strong> <%- license.license_value  %> </p>
+								<% }); %>
 									</div>
 								</div>
 							</div>
@@ -124,23 +140,21 @@
 					</div>
 				</div>
 				<% }); %>
-
 				<div class="row same-height">
 					<div class="col-md-6 col-sm-12 long-description">
 						<h3>Long Description About Agent</h3>
-						<p>This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent. This is the long description about the agent.</p>
+						<p><%- profile.agent_descr_long %></p>
 					</div>
 					<div class="col-md-6 col-sm-6 col-xs-12 map-box">
 						<a href="#" id="view-map" target="_blank" class="text-right view-map "><strong>View Map and Directions</strong></a>
 						<div class="map" id="map-container"></div>
 					</div>
 					<div class="col-sm-6 col-xs-12 visible-sm visible-xs">
-						<img src="<%- profile.office_image  %>">
+						<img src="<%- profile.profile_photo  %>">
 					</div>
 				</div>
 			</div>
-
-			<!-- About team -->
+			<!-- About team 
 			<div class="row v-center">
 				<div class="col-md-6 hidden-sm hidden-xs">
 					<img src="<%- profile.office_image  %>">
@@ -148,12 +162,13 @@
 				<div class="col-md-6 col-sm-12">
 					<div>
 						<h3>About the Team</h3>
-						<p><%- profile.whoweare_aboutus.professional %></p>
+						<p><%- profile.team_descr %></p>
 					</div>
 				</div>
 			</div>
+			-->
 
-			<!-- Team member -->
+			<!-- Team member 
 			<div class="team-member">
 				<% _.each(profile.team_members, function(team, member) { %>
 				<div class="col-md-6 col-sm-12">
@@ -183,6 +198,7 @@
 			</div>
 		</div>
 	</div>
+	-->
 
 	<!-- Footer -->
 	<div class="about-footer hidden-sm hidden-xs">
