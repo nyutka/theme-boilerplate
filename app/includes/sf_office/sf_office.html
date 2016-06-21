@@ -7,7 +7,7 @@
 	<ul class="nav nav-tabs office-tabs" role="tablist">
 		<% _.each(profile.suboffices, function(office, key) { %>
 		<li class="<%- key == 0 ? 'active' : '' %>">
-			<a href="#city<%- key %>" data-key="<%- key %>" data-toggle="tab"><%- office.city %> <%- office.office_title %></a>
+			<a href="#city<%- key %>" data-key="<%- key %>" data-toggle="tab"><%- office.city %></a>
 		</li>
 		<% }); %>
 	</ul>
@@ -22,7 +22,7 @@
 							<h3>Location:</h3>
 							<p><%- office.street %></p>
 							<p>Optional Line 2</p>
-							<p><%- office.city %>, <%- office.state %>, <%- office.suite %> <%- office.zip_code %></p>
+							<p><%- office.city %>, <%- office.state %>, <%- office.zip_code %></p>
 							<p><%- office.phone %></p>
 							<a href="#" class="btntomato-btn">Contact Agent</a>
 						</div>
@@ -37,8 +37,8 @@
 
 						<% } else { %>
 						<div class="description">
-							<h3>Vestibulum ullamcorper ligula</h3>
-							<p>Short Description About Agent: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper ligula sapien, eget rhoncus sapien congue vitae. Donec iaculis mollis ipsum ut rhoncus.</p>
+							<!-- <h3>Vestibulum ullamcorper ligula</h3> -->
+							<p><%- profile.agent_descr_long %></p>
 							<a href="#"><strong>Learn More About [Agent A. Agent Longname]</strong></a>
 						</div>
 						<% } %>
@@ -56,7 +56,7 @@
 
 	<div class="description">
 		<h3>Vestibulum ullamcorper ligula</h3>
-		<p>Short Description About Agent: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper ligula sapien, eget rhoncus sapien congue vitae. Donec iaculis mollis ipsum ut rhoncus.</p>
+		<p><%- profile.agent_descr_long %></p>
 		<a href="#"><strong>Learn More About [Agent A. Agent Longname]</strong></a>
 	</div>
 </div>

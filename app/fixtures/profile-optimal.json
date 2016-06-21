@@ -1,120 +1,63 @@
 {
-    "profile_photo": "https://s3-us-west-2.amazonaws.com/hearsaysocial/francine.jpg",
-    "first_name": "Francine",
-    "last_name": "Clark",
-    "designations": "CFA",
-    "title": "Wealth Management",
-    "twitter": "#",
-    "linkedin": "#",
-    "googleplus": "#",
-    "professional_summary": "I'm passionate about serving my customers and lorem ipsum dolor sit amet, ante elit duis vitae, eiusmod ullamcorper morbi wisi, fusce lorem ut.",
-    "awards_honors": "Agent of the year 2014",
+    "agent_descr_short": "My office specializes in selling great financial products for my special customers in a central location.",
+    "full_name": "Stephanie Tchaikovsky",
+    "designation": "CFA",
+    "mission_statement": "It is my mission to sell great financial products for my very special customers. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "team_descr": "My team specializes in providing the best service, whether it be answering phones or providing insurance quotes for you. Come by our office and say hi!",
     "suboffices": [{
-        "toll_free": "232 232 2323",
-        "fax": "34345",
-        "office_image_resize_ready": true,
-        "city": "Davison",
-        "office_hours": "Some Hours",
-        "cell": "34234234",
-        "phone": "888 777 4445",
-        "state": "MI",
-        "street": "3503 N. Gale Rd",
-        "office_title": "This is an office title",
-        "suite": "",
-        "office_image": "https://s3-us-west-2.amazonaws.com/hearsaysocial/office-3.jpeg",
-        "zip_code": "48423"
-    }, {
-        "toll_free": "800 343 5656",
-        "fax": "222 333 4444",
-        "office_image_resize_ready": true,
-        "city": "Seattle",
-        "office_hours": "Weekdays, 8 - 5",
-        "cell": "333 444 5555",
-        "phone": "(444) 555-6667",
-        "state": "WA",
-        "street": "1804 E John St",
-        "suite": "# 43",
-        "office_image": "https://s3-us-west-2.amazonaws.com/hearsaysocial/office-3.jpeg",
-        "zip_code": "98112"
+        "city": "Chicago",
+        "fax": "(415) 415-2345",
+        "toll_free": "(415) 415-2345",
+        "office_hours": "Everyday 9am - 6.30pm",
+        "cell": "(415) 415-2345",
+        "phone": "(415) 415-2345",
+        "state": "Illinois",
+        "street": "1100 Roscoe St",
+        "landmark": "",
+        "zip_code": "60657"
+    },
+{
+        "city": "San Francisco",
+        "fax": "(312) 415-2345",
+        "toll_free": "(312) 415-2345",
+        "office_hours": "Everyday 9am - 6.30pm",
+        "cell": "Not specified",
+        "phone": "(312) 415-2345",
+        "state": "California",
+        "street": "123 Larkin St",
+        "landmark": "",
+        "zip_code": "94115"
+    }
+    ],
+    "networks": {
+        "linkedin_id": "#",
+        "twitter_id": "#",
+        "facebook_id": "#"
+    },
+    "profile_photo": "http://hsl-downloadable-files.s3.amazonaws.com/1054/0f3659c913bb420fb47a559684d8b948-width-365.jpg?_=1466472810.87",
+    "languages": ["English", "Yiddish"],
+    "preferred_name": "Steph Tchaikovsky",
+    "email": "StephT@tryingsites.com",
+    "products": ["small_business_insurance"],
+    "office_photo": "http://www.southamericaliving.com/wp-content/uploads/2015/08/successful-business-woman.jpg",
+    "incorp_name": "Stephanie Tchaikovsky Inc.",
+    "licenses": [{
+        "license_name": "CFA",
+        "license_value": "1232137621"
+    },
+    {
+        "license_name": "TPF",
+        "license_value": "1232137621"
+    },
+    {
+        "license_name": "RPG",
+        "license_value": "1232137621"
+    },
+    {
+        "license_name": "TLL",
+        "license_value": "1232137621"
     }],
-    "office_image_resize_ready": true,
-    "agent_intro": "Hashtag tote bag mlkshk ugh, authentic semiotics mumblecore gentrify banjo lomo post-ironic tattooed. Raw denim selvage put a bird on it lumbersexual. Post-ironic cardigan street art gluten-free, wolf waistcoat",
-    "office_hours": "Every Other Wednesday",
-    "phones": {
-        "cell": "222 333 4444",
-        "phone": "(444) 555- 6667",
-        "fax": "1112223333",
-        "toll_free": "800 444 5555",
-        "phone_link_formatted": "4445556667",
-        "toll_free_link_formatted": "8004445555",
-        "cell_link_formatted": "2223334444",
-        "fax_link_formatted": "1112223333"
-    },
-    "address": {
-        "city": "Seattle",
-        "state": "WA",
-        "street": "500 Yale Ave N",
-        "zip_code": "98119"
-    },
-    "an_languages": ["Greek", "Japanese", "Korean", "Vietnamese"],
-    "profile_photo_resize_ready": true,
-    "email": "mminch@hearsaycorp.com",
-    "states_licensing": ["CT", "FM", "NV", "VA"],
-    "office_title": "Main Office Title",
-    "whoweare_aboutus": {
-        "professional": "I'm passionate about serving my customers and lorem ipsum dolor sit amet, ante elit duis vitae, eiusmod ullamcorper morbi wisi, fusce lorem ut ipsum integer consectetuer, pede atque eget. Pellentesque egestas nunc massa lorem phasellus arcu, magna dolor. Nostra diam amet montes convallis a, leo in quam a nunc, mauris sem facilisi voluptatum class magna vivamus. Ut in sodales feugiat. Scelerisque adipisicing vitae eu, tortor turpis nisl commodo elit, cras pellentesque pellentesque morbi at risus est, amet a sit imperdiet ante fames.",
-        "hobbies": "Chambray organic fanny pack, fingerstache green juice photo booth franzen marfa brunch affogato pop-up single-origin coffee four dollar toast. Microdosing pitchfork bushwick authentic meh. Plaid small batch hella leggings cray, neutra shoreditch before they sold out synth authentic helvetica thundercats. Meditation food truck cliche wolf pitchfork vegan. Venmo tousled sartorial hoodie pour-over. Deep v tumblr artisan hella. Flexitarian fashion axe fixie listicle, humblebrag banjo taxidermy knausgaard master cleanse pabst selvage everyday carry waistcoat kogi before they sold out.",
-        "organizations": "Scenester cold-pressed vegan, pickled ethical seitan 8-bit hoodie VHS knausgaard. Cold-pressed fap normcore, vinyl twee yuccie blue bottle church-key. PBR&B polaroid four loko aesthetic wayfarers franzen tousled. Sriracha pork belly next level schlitz occupy keffiyeh. Chambray meh banh mi chicharrones. Plaid hashtag post-ironic flexitarian lumbersexual, butcher portland vinyl swag farm-to-table ennui venmo poutine VHS. Artisan williamsburg sartorial skateboard semiotics chillwave."
-    },
-    "title": "Agency Owner",
-    "office_image": "https://s3-us-west-2.amazonaws.com/hearsaysocial/office-3.jpeg",
-    "team_members": [{
-        "team_member_phone": "343 34534 3451",
-        "team_member_last_name": "Goldenberg",
-        "team_member_title": "Chief Eldan",
-        "team_member_licenses": ["DC", "GU", "LA"],
-        "team_member_email": "eldan@eldan.eldan",
-        "team_member_location": "Your House",
-        "team_member_first_name": "Eldan",
-        "team_member_fax": "4534 345343 34543",
-        "team_member_phone_link_formatted": "343345343451",
-        "team_member_fax_link_formatted": "453434534334543"
-    }, {
-        "team_member_phone": "343 34534 3451",
-        "team_member_photo": "https://s3-us-west-2.amazonaws.com/hearsaysocial/francine.jpg",
-        "team_member_last_name": "Goldenberg",
-        "team_member_title": "Chief Eldan",
-        "team_member_bio": "This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio.",
-        "team_member_licenses": ["DC", "GU", "LA"],
-        "team_member_email": "eldan@eldan.eldan",
-        "team_member_location": "Your House",
-        "team_member_first_name": "Eldan",
-        "team_member_fax": "4534 345343 34543",
-        "team_member_phone_link_formatted": "343345343451",
-        "team_member_fax_link_formatted": "453434534334543"
-    },
-     {
-        "team_member_phone": "343 34534 3451",
-        "team_member_last_name": "Goldenberg",
-        "team_member_title": "Chief Eldan",
-        "team_member_bio": "This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio. This is the team member bio.",
-        "team_member_licenses": ["DC", "GU", "LA"],
-        "team_member_email": "eldan@eldan.eldan",
-        "team_member_location": "Your House",
-        "team_member_first_name": "Eldan",
-        "team_member_fax": "4534 345343 34543",
-        "team_member_phone_link_formatted": "343345343451",
-        "team_member_fax_link_formatted": "453434534334543"
-    }, {
-        "team_member_phone": "4534 3451",
-        "team_member_last_name": "Magoo",
-        "team_member_title": "Lives in a Zoo",
-        "team_member_licenses": [],
-        "team_member_email": "foo@foo.foo",
-        "team_member_first_name": "Foo",
-        "team_member_fax": "3453453",
-        "team_member_phone_link_formatted": "45343451",
-        "team_member_fax_link_formatted": "3453453"
-    }],
-    "slug": "standard-demo"
+    "brokercheck_link": "http://",
+    "slug": "StephT",
+    "agent_descr_long": "We specialize in financial products centered around making your life easier and less stressful. Auto, home and life insurance are the basics to ensuring you and your family are securely protected from the uncertainty of life. Reach out to us, and we will provide you with all the information you need to get the best care in all situations."
 }
