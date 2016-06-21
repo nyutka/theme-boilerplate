@@ -37,9 +37,9 @@
 
 						<% } else { %>
 						<div class="description">
-							<!-- <h3>Vestibulum ullamcorper ligula</h3> -->
+							<h3>Vestibulum ullamcorper ligula</h3>
 							<p><%- profile.agent_descr_long %></p>
-							<a href="#"><strong>Learn More About [Agent A. Agent Longname]</strong></a>
+							<a href="#"><strong>Learn More About <%- profile.full_name %></strong></a>
 						</div>
 						<% } %>
 
@@ -54,9 +54,9 @@
 		</div>
 	</div>
 
-	<div class="description">
+	<div class="hidden description">
 		<h3>Vestibulum ullamcorper ligula</h3>
 		<p><%- profile.agent_descr_long %></p>
-		<a href="#"><strong>Learn More About [Agent A. Agent Longname]</strong></a>
+		<a href="#"><strong>Learn More About <%- profile.full_name %></strong></a>
 	</div>
 </div>
