@@ -1,4 +1,4 @@
-var buildDummyJSContext = function (profileType, page_id) {
+var buildDummyJSContext = function (profileType) {
     var profile = {};
     switch (profileType) {
     case ("optimal"):
@@ -15,7 +15,6 @@ var buildDummyJSContext = function (profileType, page_id) {
         break;
     }
     var JSContext = {
-        page_id: page_id,
         base_link: "test",
         org_link: "test",
         posts: require("../../fixtures/posts.json"),
@@ -29,12 +28,12 @@ var buildDummyJSContext = function (profileType, page_id) {
 var initJSContext = function (profileType, page_id) {
     if (!window.JSContext) {
         var JSContext = require("./jscontext.js");
-        JSContext.loadData(buildDummyJSContext(profileType, page_id));
+        JSContext.loadData(buildDummyJSContext(profileType));
     }
 };
 
 module.exports = {
     init: function (profileType, page_id) {
-        initJSContext(profileType, page_id);
+        initJSContext(profileType);
     }
 };
