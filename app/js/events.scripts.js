@@ -1,8 +1,9 @@
 "use strict";
-require("./common/data-loader.js").init("optimal");
+require("./common/data-loader.js").init("optimal", "events");
 var $ = require("jquery");
 var JSContext = require("./common/jscontext.js");
 var navigation = require("../includes/navigation/navigation.js").load();
+var header = require("../includes/header/header.js").load();
 var footer = require("../includes/footer/footer.js").load();
 var events = require("../includes/events/events.js").load();
 
@@ -41,6 +42,7 @@ var getHeaderData = function () {
 var initializeTemplates = function () {
     var themeData = JSContext.getThemeData();
     navigation.init(window.JSContext);
+    header.init(window.JSContext);
     footer.init(window.JSContext);
     events.init(window.JSContext);
 };

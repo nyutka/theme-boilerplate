@@ -1,8 +1,8 @@
 "use strict";
 var JSContext = require("./jscontext.js");
-var buildDummyJSContext = function(profileType){
+var buildDummyJSContext = function(profileType, page_id){
     var profile = {};
-    switch(profileType){
+    switch(profileType, page_id){
         case("optimal"):
             profile = require("../../fixtures/profile-optimal.json");
             break;
@@ -17,6 +17,7 @@ var buildDummyJSContext = function(profileType){
             break;
     }
     var JSContext = {
+        page_id: page_id,
         base_link: "test",
         org_link: "test",
         posts : require("../../fixtures/posts.json"),
@@ -27,15 +28,15 @@ var buildDummyJSContext = function(profileType){
     return JSContext;
 }
 
-var initJSContext = function(profileType){
+var initJSContext = function(profileType, page_id){
     if (!window.JSContext){
-        JSContext.loadData(buildDummyJSContext(profileType))
+        JSContext.loadData(buildDummyJSContext(profileType, page_id))
     }
 }
 
 module.exports = {
-    init: function(profileType){
-        initJSContext(profileType);
+    init: function(profileType, page_id){
+        initJSContext(profileType, page_id);
     }
 }
 
