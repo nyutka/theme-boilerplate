@@ -1,58 +1,3 @@
-<div class="header-image">
-	<div class="container">
-		<div class="profile about">
-			<div class="hidden-sm hidden-xs">
-				<div class="header-name">
-					<h2>My Office</h2>
-				</div>
-				<!-- Social Icons -->
-				<div class="pull-right social-icons">
-					<% if (profile.networks.facebook_id ) { %> 
-					<a href="<%- profile.networks.facebook_id %>">
-						<img src="/images/facebook.png">
-					</a>
-					<% } %>
-					<% if (profile.networks.twitter_id ) { %> 
-					<a href="<%- profile.networks.twitter_id %>">
-						<img src="/images/twitter.png">
-					</a>
-					<% } %>
-					<% if (profile.networks.linkedin_id ) { %> 
-					<a href="<%- profile.networks.linkedin_id %>">
-						<img src="/images/linkedin.png">
-					</a>
-					<% } %>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-	
-<!-- Name and social icons for tablet, mobile -->
-<div class="visible-sm visible-xs name-social">
-	<div class="header-name">
-		<h2>My Office</h2>
-	</div>
-	<!-- Social Icons -->
-	<div class="pull-right social-icons">
-		<% if (profile.networks.facebook_id ) { %>
-		<a href="<%- profile.networks.facebook_id %>">
-			<img src="/images/facebook.png">
-		</a>
-		<% } %>
-		<% if (profile.networks.twitter_id ) { %>
-		<a href="<%- profile.networks.twitter_id %>">
-			<img src="/images/twitter.png">
-		</a>
-		<% } %>
-		<% if (profile.networks.linkedin_id ) { %>
-		<a href="<%- profile.networks.linkedin_id %>">
-			<img src="/images/linkedin.png">
-		</a>
-		<% } %>
-	</div>
-</div>
-
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-10 col-sm-10 col-sm-offset-1 col-md-offset-1">
@@ -168,8 +113,8 @@
 			</div>
 			-->
 
-			<!-- Team member 
-			<div class="team-member">
+			<!--  Team member  -->
+			<!-- <div class="team-member">
 				<% _.each(profile.team_members, function(team, member) { %>
 				<div class="col-md-6 col-sm-12">
 					<div class="boxes v-line">
@@ -195,10 +140,10 @@
 					</div>
 				</div>
 				<% }); %>
-			</div>
+			</div> -->
 		</div>
 	</div>
-	-->
+	
 
 	<!-- Footer -->
 	<div class="about-footer hidden-sm hidden-xs">

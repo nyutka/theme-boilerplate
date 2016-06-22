@@ -2,19 +2,33 @@ var Module = require("theme_module_loader");
 var JSContext = require("../../js/common/jscontext.js");
 var htmlTemplate = require("./sf_products.html");
 var callback = function() {
-    $('.product-slider').slick({
-        infinite: true,
-        slidesToShow: 4,
-        autoplay: true,
-        speed: 200,
-        arrows: true,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: "unslick"
+    var $slider = $('.product-slider');
+
+    if ($slider.length) {
+        var settings = {
+            infinite: true,
+            slidesToShow: 3,
+            autoplay: true,
+            speed: 200,
+            arrows: true,
+
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: 'unslick'
+                }
+            ]
+        }; 
+
+        $slider.slick(settings);
+
+        $(window).resize(function() {
+            if ($(window).width() >= 768 && !$slider.hasClass('slick-initialized')) {
+                
+                $slider.slick(settings);
             }
-        ]
-    });
+        });
+    }
 };
 module.exports = {
     load: function() {

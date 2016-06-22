@@ -1,0 +1,54 @@
+<div class="header-image">
+  <div class="container">
+    <div class="profile about">
+      <div class="hidden-sm hidden-xs">
+        <div class="header-name">
+          <h2><%- theme_data.pages[page_id].title %></h2>
+        </div>
+        <!-- Social Icons -->
+        <div class="pull-right social-icons">
+          <% if (profile.networks.facebook_id ) { %> 
+          <a href="<%- profile.networks.facebook_id %>">
+            <img src="/images/facebook.png">
+          </a>
+          <% } %>
+          <% if (profile.networks.twitter_id ) { %> 
+          <a href="<%- profile.networks.twitter_id %>">
+            <img src="/images/twitter.png">
+          </a>
+          <% } %>
+          <% if (profile.networks.linkedin_id ) { %> 
+          <a href="<%- profile.networks.linkedin_id %>">
+            <img src="/images/linkedin.png">
+          </a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<!-- Name and social icons for tablet, mobile -->
+<div class="visible-sm visible-xs name-social">
+  <div class="header-name">
+    <h2><%- theme_data.pages[page_id].title %></h2>
+  </div>
+  <!-- Social Icons -->
+  <div class="pull-right social-icons">
+    <% if (profile.networks.facebook_id ) { %>
+    <a href="<%- profile.networks.facebook_id %>">
+      <img src="/images/facebook.png">
+    </a>
+    <% } %>
+    <% if (profile.networks.twitter_id ) { %>
+    <a href="<%- profile.networks.twitter_id %>">
+      <img src="/images/twitter.png">
+    </a>
+    <% } %>
+    <% if (profile.networks.linkedin_id ) { %>
+    <a href="<%- profile.networks.linkedin_id %>">
+      <img src="/images/linkedin.png">
+    </a>
+    <% } %>
+  </div>
+</div>
