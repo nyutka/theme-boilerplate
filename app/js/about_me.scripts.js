@@ -1,5 +1,5 @@
 "use strict";
-require("./common/data-loader.js").init("optimal", "about_me");
+require("./common/data-loader.js").init("optimal");
 var $ = require("jquery");
 var JSContext = require("./common/jscontext.js");
 var navigation = require("../includes/navigation/navigation.js").load();
@@ -41,7 +41,7 @@ var getHeaderData = function () {
 
 var initializeTemplates = function () {
     navigation.init(window.JSContext);
-    header.init(window.JSContext);
+    header.init($.extend(window.JSContext, {page: {title: "My Office"}}));
     footer.init(window.JSContext);
     about_me.init(window.JSContext);
 };
