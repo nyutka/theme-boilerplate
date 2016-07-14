@@ -11,7 +11,11 @@ var callback = function(){
         if (scroll >= 22) sticky.addClass('navbar-fixed-top');
         else sticky.removeClass('navbar-fixed-top');
     });
-
+    $(window).bind('resize', function () {
+        if($('body').hasClass('sidr-open') && $(window).width() >= 768) {
+            $.sidr('close', 'sidr-main');
+        }
+    });
     $('#responsive-menu-button').sidr({
         name: 'sidr-main',
         source: '#navigation-mobile',
